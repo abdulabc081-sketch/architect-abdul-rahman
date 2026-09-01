@@ -74,6 +74,44 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media (max-width: 767px) {
+  #home {
+    padding-top: 6.5rem !important;
+  }
+
+  #hero-name {
+    letter-spacing: 0.04em !important;
+  }
+
+  #hero-bio {
+    text-align: left !important;
+  }
+
+  #hero-stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding-top: 1rem !important;
+  }
+
+  #hero-stats-row > div {
+    border-left: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+  }
+
+  #hero-stats-row > div:first-child {
+    border-top: none !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #home {
+    padding-top: 7rem !important;
+  }
+}
+
 /* Print styles for CV */
 @media print {
   body {

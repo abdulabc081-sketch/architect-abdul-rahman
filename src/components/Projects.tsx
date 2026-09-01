@@ -11,7 +11,7 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) => {
   const [activeFilter, setActiveFilter] = useState<string>('ALL');
 
-  const filters = ['ALL', 'RESIDENTIAL', 'COMMERCIAL', 'INTERIOR', 'FIT-OUT', 'VILLA'];
+  const filters = ['ALL', 'RESIDENTIAL', 'COMMERCIAL'];
 
   const filteredProjects = activeFilter === 'ALL'
     ? projectsData
@@ -75,7 +75,7 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
         </div>
 
         {/* 8 Projects Grid (4 cols on lg screens matching Page 4) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div id="project-grid" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
