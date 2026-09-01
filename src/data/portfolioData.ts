@@ -34,7 +34,7 @@ export const personalInfo = {
   email: 'architect.abdulrahman007@gmail.com',
   location: 'Dubai, UAE',
   phone: '+9710561713688',
-  linkedin: 'https://linkedin.com/in/abdulrahmanazhar',
+  linkedin: 'https://www.linkedin.com/in/abdul-rahman-azhar-00a92018b/',
   whatsapp: 'https://wa.me/9710561713688',
   bio: `A dedicated and results driven Architect with over 6 years of professional experience in the UAE, having successfully delivered 40+ projects across residential, commercial, and fit-out sectors. Experienced in managing the full project lifecycle from concept and schematic design through design development, construction documentation, authority approvals, tender documentation, material selection, BOQ preparation, and site coordination. Strong knowledge of UAE building regulations and approval processes, with proven experience securing approvals and NOCs from Dubai Municipality, Trakhees, DDA, DCD, DEWA, Nakheel, and Emaar. Adept at producing high quality 3D visualisations and detailed technical drawings that clearly communicate design intent to clients, consultants, and contractors. Skilled in collaborating with multidisciplinary teams to deliver projects on time, within budget, and to the highest quality standards with a strong commitment to innovative, sustainable, and functional design solutions.`,
   quote: `Architecture is not just about buildings, but about creating better spaces for better living.`,
@@ -281,7 +281,7 @@ export const projectsData: Project[] = [
       'Detailed Architectural & Structural Coordination',
       'Construction Documentation & Site Supervision',
     ],
-    authorities: ['Dubai Municipality', 'Civil Defence', 'DEWA', 'Sharjah Municipality'],
+    authorities: ['Dubai Municipality', 'Civil Defence', 'DEWA', ],
     software: ['AutoCAD', 'Autodesk Revit', '3ds Max', 'V-Ray', 'Enscape'],
   },
   {
@@ -305,7 +305,7 @@ export const projectsData: Project[] = [
       'BIM Clash Detection & Coordination',
       'Tender Documentation & Bill of Quantities',
     ],
-    authorities: ['Dubai Development Authority (DDA)', 'Dubai Civil Defence (DCD)', 'DEWA'],
+    authorities: ['Dubai Development Authority (DDA)', 'Dubai Civil Defence (DCD)', ],
     software: ['Autodesk Revit', 'Navisworks', 'AutoCAD', 'Lumion'],
   },
   {
@@ -401,7 +401,7 @@ export const projectsData: Project[] = [
       'Material Sourcing & BOQ Estimation',
       'Periodic Site Audits',
     ],
-    authorities: ['Abu Dhabi Municipality', 'Civil Defence', 'ADDC'],
+    authorities: ['Emaar Properties', 'Dubai Municipality', 'DCD'],
     software: ['AutoCAD', 'SketchUp', 'Lumion', 'Adobe InDesign'],
   },
   {
@@ -425,7 +425,7 @@ export const projectsData: Project[] = [
       '3D Animation & Marketing Visuals',
       'Tender Package & Contractor Handover',
     ],
-    authorities: ['Ajman Municipality', 'Civil Defence', 'FEWA'],
+    authorities: ['Emaar Properties', 'Dubai Municipality', 'DCD'],
     software: ['Autodesk Revit', 'AutoCAD', '3ds Max + V-Ray', 'Blender'],
   },
   {
@@ -449,7 +449,7 @@ export const projectsData: Project[] = [
       'Custom Millwork & Lighting Schematics',
       'Kitchen Equipment Integration & MEP Coordination',
     ],
-    authorities: ['Dubai Municipality Food Safety', 'Dubai Civil Defence (DCD)', 'DEWA'],
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence (DCD)', 'DEWA'],
     software: ['AutoCAD', '3ds Max', 'V-Ray', 'Adobe Photoshop'],
   },
 ];
