@@ -125,12 +125,4 @@ body {
     display: block !important;
   }
 }
-@media (max-width: 1279px) {
-  #root {
-    width: 1280px;
-    transform-origin: top left;
-  }
-  #scale-outer {
-    overflow: hidden;
-  }
-}
+
