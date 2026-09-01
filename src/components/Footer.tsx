@@ -27,12 +27,8 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
             <p className="text-xs sm:text-sm leading-relaxed max-w-sm pt-2">
               Architectural Design & Project Delivery across the UAE. Specializing in luxury residential villas, commercial high-rises, and turnkey statutory authority approvals.
             </p>
-            <div className="flex items-center gap-4 text-xs font-semibold text-[#C5A880] pt-2">
-              <span>DUBAI</span>
-              <span>•</span>
-              <span>ABU DHABI</span>
-              <span>•</span>
-              <span>SHARJAH</span>
+                        <div className="flex items-center gap-4 text-xs font-semibold text-[#C5A880] pt-2">
+              <span>DUBAI, UAE</span>
             </div>
           </div>
 
