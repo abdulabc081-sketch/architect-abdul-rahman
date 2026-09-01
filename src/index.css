@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-manrope);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-manrope);
+  }
+
+  /* Specific Font Hierarchy Rules */
+  /* Your Name, Hero Heading, Section Titles */
+  .font-cormorant,
+  .font-heading,
+  .font-serif,
+  .font-name,
+  .font-hero-heading,
+  .font-section-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Body, Navigation, Labels, Buttons, Numbers */
+  .font-manrope,
+  .font-sans,
+  .font-body,
+  .font-nav,
+  .font-label,
+  .font-btn,
+  .font-button,
+  .font-number {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(197, 168, 128, 0.25);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 168, 128, 0.45);
+}
+
+:not(.dark) ::-webkit-scrollbar-thumb {
+  background: rgba(158, 125, 78, 0.3);
+  border-radius: 3px;
+}
+
+:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(158, 125, 78, 0.6);
+}
+
+/* Smooth theme transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Print styles for CV */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
