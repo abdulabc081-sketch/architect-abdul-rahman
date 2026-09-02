@@ -149,8 +149,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
               </div>
 
-              {/* Vertical divider */}
-              <div className={`hidden sm:block absolute left-1/3 top-0 bottom-0 w-px ${isDark ? 'bg-neutral-800' : 'bg-neutral-200'}`} />
+              
 
               {/* Metric 2: Projects Delivered */}
               <div
