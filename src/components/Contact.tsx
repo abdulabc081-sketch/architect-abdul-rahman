@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, CheckCircle2, Globe, Clock } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, CheckCircle2, Globe, Clock, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
-
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+    <path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.876.518 3.63 1.42 5.13L2 22l4.995-1.352A9.94 9.94 0 0012.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.03a8.01 8.01 0 01-4.086-1.118l-.293-.174-3.033.822.822-3.033-.174-.293A8.01 8.01 0 013.97 12c0-4.43 3.6-8.03 8.03-8.03 4.43 0 8.03 3.6 8.03 8.03 0 4.43-3.6 8.03-8.03 8.03z" />
+  </svg>
+);
 interface ContactProps {
   isDark: boolean;
 }
@@ -212,6 +217,44 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                 <span className={`text-sm sm:text-base font-bold mt-0.5 block ${isDark ? 'text-white' : 'text-neutral-900'}`}>
                   Available for Full-time & Consultancy
                 </span>
+                               <span className="text-xs text-neutral-400 block mt-0.5">
+                  Immediate joining / Project-based
+                </span>
+              </div>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-3 pt-2">
+              
+                href={personalInfo.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className={`p-3 rounded-xl border transition-colors ${
+                  isDark
+                    ? 'bg-neutral-950 border-neutral-800 text-[#C5A880] hover:border-[#C5A880]'
+                    : 'bg-white border-neutral-200 text-[#9E7D4E] hover:border-[#9E7D4E] shadow-sm'
+                }`}
+              >
+                <WhatsAppIcon className="w-5 h-5" />
+              </a>
+              
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className={`p-3 rounded-xl border transition-colors ${
+                  isDark
+                    ? 'bg-neutral-950 border-neutral-800 text-[#C5A880] hover:border-[#C5A880]'
+                    : 'bg-white border-neutral-200 text-[#9E7D4E] hover:border-[#9E7D4E] shadow-sm'
+                }`}
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column: Send a Message Form (7 cols) */}
                 <span className="text-xs text-neutral-400 block mt-0.5">
                   Immediate joining / Project-based
                 </span>
