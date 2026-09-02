@@ -182,7 +182,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   LANGUAGES
                 </span>
                 <span className={`text-sm sm:text-base font-bold mt-0.5 block ${isDark ? 'text-white' : 'text-neutral-900'}`}>
-                  English, Arabic, Urdu
+                  English, Tamil, Malayalam
                 </span>
                 <span className="text-xs text-neutral-400 block mt-0.5">
                   Fluent in spoken & technical English
