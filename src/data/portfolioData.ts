@@ -94,7 +94,7 @@ export const experienceData: ExperienceItem[] = [
     period: 'SEP2021 - DEC2021',
     role: 'INTERN ARCHITECT',
     company: 'Akbari Hussain Akbari Architect',
-    location: 'UAE',
+    location: 'india',
     description: 'Worked alongside senior architects during concept and schematic design development, gaining practical experience in architectural documentation, visualization, and project presentation.',
     responsibilities: [
       'Concept and schematic design support.',
@@ -108,7 +108,7 @@ export const experienceData: ExperienceItem[] = [
     period: 'MAY2021 - AUG2021',
     role: 'INTERN ARCHITECT',
     company: 'Nandhis Architect',
-    location: 'UAE',
+    location: 'india',
     description: 'Built a strong foundation in architectural design and documentation by supporting senior architects across schematic design, technical drawings, visualization, and presentation development.',
     responsibilities: [
       'Supported senior architects across schematic design and technical drawings.',
