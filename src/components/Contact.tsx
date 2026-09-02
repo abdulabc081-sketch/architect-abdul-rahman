@@ -154,7 +154,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   LOCATION
                 </span>
                 <span className={`text-sm sm:text-base font-bold mt-0.5 block ${isDark ? 'text-white' : 'text-neutral-900'}`}>
-                  Sharjah / Dubai, UAE
+                  Dubai, UAE
                 </span>
                 <span className="text-xs text-neutral-400 block mt-0.5">
                   Available for meetings across UAE
