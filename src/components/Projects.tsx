@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, MapPin, Eye } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 import { Project } from '../types';
 
@@ -74,87 +73,30 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
           </div>
         </div>
 
-        {/* 8 Projects Grid (4 cols on lg screens matching Page 4) */}
+        {/* Projects Grid — image tiles with just a title, no other text */}
         <div id="project-grid" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               id={`project-card-${project.id}`}
               onClick={() => onSelectProject(project)}
-              className={`group flex flex-col rounded-2xl overflow-hidden border cursor-pointer transition-all duration-500 hover:-translate-y-1.5 ${
-                isDark
-                  ? 'bg-neutral-950 border-neutral-800 hover:border-[#C5A880]/60 hover:shadow-[0_10px_30px_rgba(0,0,0,0.8)]'
-                  : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/60 hover:shadow-xl'
-              }`}
+              className="group relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
             >
-              {/* Image Preview Container */}
-              <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-neutral-950">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+              <img
+                src={project.image}
+                alt={project.title}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
 
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-75 group-hover:opacity-50 transition-opacity" />
+              {/* Gradient overlay so the title stays readable */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
-                {/* Top Category Tag Badge */}
-                <div className="absolute top-3.5 left-3.5 pointer-events-none">
-                  <span className="px-2.5 py-0.5 text-[9px] font-bold tracking-[0.2em] uppercase rounded bg-black/75 backdrop-blur-md text-[#C5A880] border border-white/10">
-                    {project.tag}
-                  </span>
-                </div>
-
-                {/* Hover Quick View Trigger */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="px-3.5 py-1.5 rounded-full bg-black/90 backdrop-blur-md text-[#C5A880] text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 border border-[#C5A880]/40 shadow-xl">
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>VIEW PROJECT</span>
-                  </span>
-                </div>
-              </div>
-
-              {/* Card Body matching Page 4 typography and details */}
-              <div className="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3
-                    className={`font-cormorant text-xl font-bold uppercase tracking-wide mb-1.5 transition-colors leading-snug ${
-                      isDark ? 'text-white group-hover:text-[#C5A880]' : 'text-neutral-900 group-hover:text-[#9E7D4E]'
-                    }`}
-                  >
-                    {project.title}
-                  </h3>
-
-                  <div className="flex items-center gap-1.5 text-xs text-neutral-400 mb-1">
-                    <MapPin className="w-3.5 h-3.5 text-[#C5A880] flex-shrink-0" />
-                    <span className={`font-manrope ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
-                      {project.location}
-                    </span>
-                  </div>
-
-                  <p className={`font-manrope text-[11px] font-medium uppercase tracking-wider ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}>
-                    {project.area} • {project.year}
-                  </p>
-                </div>
-
-                <div className="pt-4 mt-3 border-t border-neutral-800/40 flex items-center justify-between">
-                  <span
-                    className={`font-manrope text-[11px] font-bold tracking-widest uppercase transition-colors flex items-center gap-1 ${
-                      isDark ? 'text-neutral-400 group-hover:text-[#C5A880]' : 'text-neutral-600 group-hover:text-[#9E7D4E]'
-                    }`}
-                  >
-                    <span>DETAILS</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
-                  <span
-                    className={`font-manrope text-[10px] font-bold px-2 py-0.5 rounded ${
-                      isDark ? 'bg-neutral-900 text-[#C5A880]' : 'bg-neutral-100 text-[#9E7D4E]'
-                    }`}
-                  >
-                    {project.category}
-                  </span>
-                </div>
+              {/* Project Name only */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="font-cormorant text-xl sm:text-2xl font-bold uppercase tracking-wide text-white leading-snug">
+                  {project.title}
+                </h3>
               </div>
             </div>
           ))}
@@ -163,4 +105,3 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
     </section>
   );
 };
-
