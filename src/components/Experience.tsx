@@ -42,7 +42,7 @@ export const Experience: React.FC<ExperienceProps> = ({ isDark }) => {
           <div className="lg:col-span-7 space-y-10 relative">
             {/* Vertical timeline line */}
             <div
-              className={`absolute left-2 top-3 bottom-3 w-[3px] ${
+              className={`absolute left-1.5 top-3 bottom-3 w-[2px] ${
                 isDark ? 'bg-neutral-800' : 'bg-neutral-300'
               }`}
             />
