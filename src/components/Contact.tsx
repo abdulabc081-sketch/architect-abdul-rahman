@@ -223,7 +223,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               </div>
             </div>
 
-                        {/* Social Icons */}
+                       {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               
                 href={personalInfo.whatsapp}
@@ -253,15 +253,6 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               </a>
             </div>
           </div>
-          {/* Right Column: Send a Message Form (7 cols) */}
-          <div
-            className={`lg:col-span-7 p-7 sm:p-9 rounded-2xl border transition-all ${
-              isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-md'
-            }`}
-          >
-            {isSubmitted ? (
-              <div className="py-12 flex flex-col items-center text-center space-y-4">
-                <div
                   className={`w-16 h-16 rounded-full flex items-center justify-center border ${
                     isDark
                       ? 'bg-[#C5A880]/15 border-[#C5A880] text-[#C5A880]'
