@@ -223,7 +223,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               </div>
             </div>
 
-            {/* Social Icons */}
+                        {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               
                 href={personalInfo.whatsapp}
@@ -253,15 +253,6 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               </a>
             </div>
           </div>
-
-          {/* Right Column: Send a Message Form (7 cols) */}
-                <span className="text-xs text-neutral-400 block mt-0.5">
-                  Immediate joining / Project-based
-                </span>
-              </div>
-            </div>
-          </div>
-
           {/* Right Column: Send a Message Form (7 cols) */}
           <div
             className={`lg:col-span-7 p-7 sm:p-9 rounded-2xl border transition-all ${
