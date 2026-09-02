@@ -35,7 +35,7 @@ export const personalInfo = {
   location: 'Dubai, UAE',
   phone: '+9710561713688',
   linkedin: 'https://www.linkedin.com/in/abdul-rahman-azhar-00a92018b/',
-  whatsapp: 'https://wa.me/9710561713688',
+  whatsapp: 'https://wa.me/971561713688',
   bio: `A dedicated and results driven Architect with over 6 years of professional experience in the UAE, having successfully delivered 40+ projects across residential, commercial, and fit-out sectors. Experienced in managing the full project lifecycle from concept and schematic design through design development, construction documentation, authority approvals, tender documentation, material selection, BOQ preparation, and site coordination. Strong knowledge of UAE building regulations and approval processes, with proven experience securing approvals and NOCs from Dubai Municipality, Trakhees, DDA, DCD, DEWA, Nakheel, and Emaar. Adept at producing high quality 3D visualisations and detailed technical drawings that clearly communicate design intent to clients, consultants, and contractors. Skilled in collaborating with multidisciplinary teams to deliver projects on time, within budget, and to the highest quality standards with a strong commitment to innovative, sustainable, and functional design solutions.`,
   quote: `Architecture is not just about buildings, but about creating better spaces for better living.`,
   quoteAuthor: `Abdul Rahman Azhar`,
