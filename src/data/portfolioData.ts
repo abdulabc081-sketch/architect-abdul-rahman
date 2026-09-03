@@ -6,6 +6,16 @@ import luxuryApartmentImg from '../assets/images/luxury_apartment_interior_17882
 import corporateFitoutImg from '../assets/images/corporate_office_fitout_1788238829293.jpg';
 import contemporaryVillaImg from '../assets/images/contemporary_villa_barari_1788238848616.jpg';
 import privateResidenceImg from '../assets/images/private_residence_abudhabi_1788238859758.jpg';
+import binaryCoverImg from '../assets/images/binarybuildingCover.jpg';
+import binaryPhoto1Img from '../assets/images/binarybuilding_photo1.jpg';
+import binaryPhoto2Img from '../assets/images/binarybuilding_photo2.jpg';
+import binaryPhoto3Img from '../assets/images/binarybuilding_photo3.jpg';
+import binaryPhoto4Img from '../assets/images/binarybuilding_photo4.jpg';
+import binaryPhoto5Img from '../assets/images/binarybuilding_photo5.jpg';
+import binaryPhoto6Img from '../assets/images/binarybuilding_photo6.jpg';
+import binaryPhoto7Img from '../assets/images/binarybuilding_photo7.jpg';
+import binaryPhoto8Img from '../assets/images/binarybuilding_photo8.jpg';
+import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
 
@@ -259,7 +269,34 @@ export const workflowSteps: WorkflowStep[] = [
   },
 ];
 
-export const projectsData: Project[] = [
+  {
+    id: 'sharif-group-office',
+    title: 'SHARIF GROUP OFFICE',
+    subtitle: 'Corporate Office Fit-Out at Binary Tower',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    location: 'Business Bay, Dubai, UAE',
+    role: 'Project Architect'
+    status: 'Completed',
+    image: binaryCoverImg,
+    gallery: [
+      binaryPhoto1Img,
+      binaryPhoto2Img,
+      binaryPhoto3Img,
+      binaryPhoto4Img,
+      binaryPhoto5Img,
+      binaryPhoto6Img,
+      binaryPhoto7Img,
+      binaryPhoto8Img,
+      binaryPhoto9Img,
+      binaryPhoto10Img,
+      binaryPhoto11Img,
+      binaryPhoto12Img,
+    ],
+    summary: 'A corporate office fit-out for Sharif Group, balancing warm natural materials with a refined, modern identity across reception, executive offices, and lounge areas.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Omniyat'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },export const projectsData: Project[] = [
   {
     id: 'modern-arabic-villa',
     title: 'MODERN ARABIC VILLA',
