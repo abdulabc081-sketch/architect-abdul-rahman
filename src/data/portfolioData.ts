@@ -270,9 +270,10 @@ export const workflowSteps: WorkflowStep[] = [
     description: 'Final handover, documentation and project closeout.',
     iconName: 'Key',
   },
-];
+  ];
 
-   {
+export const projectsData: Project[] = [
+  {
     id: 'sharif-group-office',
     title: 'SHARIF GROUP OFFICE',
     subtitle: 'Corporate Office Fit-Out at Binary Tower',
@@ -302,7 +303,6 @@ export const workflowSteps: WorkflowStep[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Omniyat'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-  },export const projectsData: Project[] = [
   {
     id: 'modern-arabic-villa',
     title: 'MODERN ARABIC VILLA',
