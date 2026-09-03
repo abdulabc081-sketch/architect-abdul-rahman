@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, CheckCircle2, Globe, Clock, Linkedin } from 'lucide-react';
+import React from 'react';
+import { Mail, MapPin, Phone, Globe, Clock, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -14,24 +14,6 @@ interface ContactProps {
 }
 
 export const Contact: React.FC<ContactProps> = ({ isDark }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 800);
-  };
-
   return (
     <section
       id="contact"
@@ -256,7 +238,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
             </div>
           </div>
 
-                   {/* Right Column: Let's Build Together Banner (7 cols) */}
+          {/* Right Column: Let's Build Together Banner (7 cols) */}
           <div
             className={`lg:col-span-7 p-8 sm:p-12 rounded-2xl border flex flex-col justify-center ${
               isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-md'
@@ -288,3 +270,22 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               concept-led residential interiors to full-lifecycle institutional projects with authority submissions.
             </p>
           </div>
+        </div>
+
+        {/* Bottom Closing Banner matching Page 5 */}
+        <div className="mt-20 pt-10 border-t border-neutral-800/40 text-center">
+          <p
+            className={`text-xs font-bold tracking-[0.25em] uppercase mb-1.5 ${
+              isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+            }`}
+          >
+            THANK YOU FOR REVIEWING MY PORTFOLIO
+          </p>
+          <p className={`text-sm font-semibold tracking-wider uppercase ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>
+            ABDUL RAHMAN AZHAR • ARCHITECT & PROJECT DELIVERY SPECIALIST • UAE
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
