@@ -256,186 +256,35 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
             </div>
           </div>
 
-          {/* Right Column: Send a Message Form (7 cols) */}
+                   {/* Right Column: Let's Build Together Banner (7 cols) */}
           <div
-            className={`lg:col-span-7 p-7 sm:p-9 rounded-2xl border transition-all ${
+            className={`lg:col-span-7 p-8 sm:p-12 rounded-2xl border flex flex-col justify-center ${
               isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-md'
             }`}
           >
-            {isSubmitted ? (
-              <div className="py-12 flex flex-col items-center text-center space-y-4">
-                <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center border ${
-                    isDark
-                      ? 'bg-[#C5A880]/15 border-[#C5A880] text-[#C5A880]'
-                      : 'bg-[#9E7D4E]/15 border-[#9E7D4E] text-[#9E7D4E]'
-                  }`}
-                >
-                  <CheckCircle2 className="w-8 h-8" />
-                </div>
-                <h3
-                  className="font-cormorant text-2xl sm:text-3xl font-bold uppercase tracking-wide"
-                >
-                  MESSAGE TRANSMITTED
-                </h3>
-                <p className="font-manrope text-sm max-w-md text-neutral-400">
-                  Thank you for reaching out, {formData.name}. Abdul Rahman Azhar will review your message and respond promptly.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setFormData({ name: '', email: '', subject: '', message: '' });
-                  }}
-                  className={`font-manrope mt-4 px-6 py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase border transition-colors ${
-                    isDark
-                      ? 'border-[#C5A880] text-[#C5A880] hover:bg-[#C5A880] hover:text-black'
-                      : 'border-[#9E7D4E] text-[#9E7D4E] hover:bg-[#9E7D4E] hover:text-white'
-                  }`}
-                >
-                  SEND ANOTHER MESSAGE
-                </button>
-              </div>
-            ) : (
-              <form id="contact-form" onSubmit={handleSubmit} className="space-y-5 text-left">
-                <h3
-                  className="font-cormorant text-2xl font-bold uppercase tracking-wider mb-4"
-                >
-                  SEND A MESSAGE
-                </h3>
-
-                {/* Name & Email Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="contact-name"
-                      className="block text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5"
-                    >
-                      YOUR NAME *
-                    </label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      required
-                      placeholder="e.g. Tariq Al Mansoori"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A880] ${
-                        isDark
-                          ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600'
-                          : 'bg-neutral-50 border-neutral-200 text-neutral-900 placeholder-neutral-400'
-                      }`}
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="contact-email"
-                      className="block text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5"
-                    >
-                      EMAIL ADDRESS *
-                    </label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      required
-                      placeholder="name@company.ae"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A880] ${
-                        isDark
-                          ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600'
-                          : 'bg-neutral-50 border-neutral-200 text-neutral-900 placeholder-neutral-400'
-                      }`}
-                    />
-                  </div>
-                </div>
-
-                {/* Subject */}
-                <div>
-                  <label
-                    htmlFor="contact-subject"
-                    className="block text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5"
-                  >
-                    SUBJECT / PROJECT TYPE *
-                  </label>
-                  <input
-                    id="contact-subject"
-                    type="text"
-                    required
-                    placeholder="e.g. Architectural Design & DM Authority Approval Inquiry"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A880] ${
-                      isDark
-                        ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600'
-                        : 'bg-neutral-50 border-neutral-200 text-neutral-900 placeholder-neutral-400'
-                    }`}
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label
-                    htmlFor="contact-message"
-                    className="block text-[11px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5"
-                  >
-                    MESSAGE *
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    rows={5}
-                    required
-                    placeholder="Describe your project requirements, scope, plot details, or questions..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A880] ${
-                      isDark
-                        ? 'bg-neutral-900 border-neutral-800 text-white placeholder-neutral-600'
-                        : 'bg-neutral-50 border-neutral-200 text-neutral-900 placeholder-neutral-400'
-                    }`}
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  id="contact-submit-btn"
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`font-manrope w-full py-4 px-6 rounded-xl text-xs sm:text-sm font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A880] ${
-                    isDark
-                      ? 'bg-[#C5A880] hover:bg-[#d8c3a5] text-black shadow-lg'
-                      : 'bg-[#9E7D4E] hover:bg-[#85663B] text-white shadow-md'
-                  }`}
-                >
-                  {isSubmitting ? (
-                    <span>SENDING...</span>
-                  ) : (
-                    <>
-                      <span>SEND MESSAGE</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+            <span
+              className={`font-manrope text-xs font-bold tracking-[0.25em] uppercase mb-4 ${
+                isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+              }`}
+            >
+              THANK YOU - LET'S BUILD TOGETHER
+            </span>
+            <h3
+              className={`font-cormorant text-5xl sm:text-6xl font-bold leading-[1.05] mb-6 ${
+                isDark ? 'text-white' : 'text-neutral-900'
+              }`}
+            >
+              Let's Build
+              <br />
+              <span className={`italic ${isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'}`}>Together.</span>
+            </h3>
+            <div className={`w-full h-[1px] mb-6 ${isDark ? 'bg-neutral-800' : 'bg-neutral-200'}`} />
+            <p
+              className={`font-manrope text-base sm:text-lg leading-relaxed ${
+                isDark ? 'text-neutral-400' : 'text-neutral-600'
+              }`}
+            >
+              Open to architectural and interior design opportunities across Dubai and the wider UAE — from
+              concept-led residential interiors to full-lifecycle institutional projects with authority submissions.
+            </p>
           </div>
-        </div>
-
-        {/* Bottom Closing Banner matching Page 5 */}
-        <div className="mt-20 pt-10 border-t border-neutral-800/40 text-center">
-          <p
-            className={`text-xs font-bold tracking-[0.25em] uppercase mb-1.5 ${
-              isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
-            }`}
-          >
-            THANK YOU FOR REVIEWING MY PORTFOLIO
-          </p>
-          <p className={`text-sm font-semibold tracking-wider uppercase ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>
-            ABDUL RAHMAN AZHAR • ARCHITECT & PROJECT DELIVERY SPECIALIST • UAE
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
