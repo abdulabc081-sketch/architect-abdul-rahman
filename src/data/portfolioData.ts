@@ -21,7 +21,31 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
-
+import samaCoverImg from '../assets/images/samatowerCover.jpg';
+import samaPhoto1Img from '../assets/images/samatower_photo1.jpg';
+import samaPhoto2Img from '../assets/images/samatower_photo2.jpg';
+import samaPhoto3Img from '../assets/images/samatower_photo3.jpg';
+import samaPhoto4Img from '../assets/images/samatower_photo4.jpg';
+import samaPhoto5Img from '../assets/images/samatower_photo5.jpg';
+import samaPhoto6Img from '../assets/images/samatower_photo6.jpg';
+import samaPhoto7Img from '../assets/images/samatower_photo7.jpg';
+import samaPhoto8Img from '../assets/images/samatower_photo8.jpg';
+import samaPhoto9Img from '../assets/images/samatower_photo9.jpg';
+import samaPhoto10Img from '../assets/images/samatower_photo10.jpg';
+import samaPhoto11Img from '../assets/images/samatower_photo11.jpg';
+import burjSalamCoverImg from '../assets/images/burjalsalamCover.jpg';
+import burjSalamPhoto1Img from '../assets/images/burjalsalam_photo1.jpg';
+import burjSalamPhoto2Img from '../assets/images/burjalsalam_photo2.jpg';
+import burjSalamPhoto3Img from '../assets/images/burjalsalam_photo3.jpg';
+import burjSalamPhoto4Img from '../assets/images/burjalsalam_photo4.jpg';
+import burjSalamPhoto5Img from '../assets/images/burjalsalam_photo5.jpg';
+import burjSalamPhoto6Img from '../assets/images/burjalsalam_photo6.jpg';
+import burjSalamPhoto7Img from '../assets/images/burjalsalam_photo7.jpg';
+import burjSalamPhoto8Img from '../assets/images/burjalsalam_photo8.jpg';
+import burjSalamPhoto9Img from '../assets/images/burjalsalam_photo9.jpg';
+import burjSalamPhoto10Img from '../assets/images/burjalsalam_photo10.jpg';
+import burjSalamPhoto11Img from '../assets/images/burjalsalam_photo11.jpg';
+import burjSalamPhoto12Img from '../assets/images/burjalsalam_photo12.jpg';
 export {
   portraitImg,
   modernArabicVillaImg,
