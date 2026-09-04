@@ -21,6 +21,16 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import pearlshireCoverImg from '../assets/images/pearlshireofficeoasiscenterCover.jpg';
+import pearlshirePhoto1Img from '../assets/images/pearlshireofficeoasiscenter_photo1.jpg';
+import pearlshirePhoto2Img from '../assets/images/pearlshireofficeoasiscenter_photo2.jpg';
+import pearlshirePhoto3Img from '../assets/images/pearlshireofficeoasiscenter_photo3.jpg';
+import pearlshirePhoto4Img from '../assets/images/pearlshireofficeoasiscenter_photo4.jpg';
+import pearlshirePhoto5Img from '../assets/images/pearlshireofficeoasiscenter_photo5.jpg';
+import pearlshirePhoto6Img from '../assets/images/pearlshireofficeoasiscenter_photo6.jpg';
+import pearlshirePhoto7Img from '../assets/images/pearlshireofficeoasiscenter_photo7.jpg';
+import pearlshirePhoto8Img from '../assets/images/pearlshireofficeoasiscenter_photo8.jpg';
+import pearlshirePhoto9Img from '../assets/images/pearlshireofficeoasiscenter_photo9.jpg';
 import degrootCoverImg from '../assets/images/degrootconcordtowerCover.jpg';
 import degrootPhoto1Img from '../assets/images/degrootconcordtower_photo1.jpg';
 import degrootPhoto2Img from '../assets/images/degrootconcordtower_photo2.jpg';
@@ -424,7 +434,33 @@ export const projectsData: Project[] = [
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
   ];
-
+  {
+    id: 'pearlshire-office-09',
+    title: 'PEARLSHIRE OFFICE -09',
+    subtitle: 'Corporate Office Fit-Out at Oasis Center',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    year: '',
+    location: 'Oasis Center, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: pearlshireCoverImg,
+    gallery: [
+      pearlshirePhoto1Img,
+      pearlshirePhoto2Img,
+      pearlshirePhoto3Img,
+      pearlshirePhoto4Img,
+      pearlshirePhoto5Img,
+      pearlshirePhoto6Img,
+      pearlshirePhoto7Img,
+      pearlshirePhoto8Img,
+      pearlshirePhoto9Img,
+    ],
+    summary: 'A thoughtfully planned corporate office space designed to balance collaboration, focus, and functionality, integrating reception, meeting space, workstations, and executive cabins within an efficient spatial arrangement.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
 export const authorityBadges: AuthorityBadge[] = [
   {
     code: 'DM',
