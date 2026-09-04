@@ -423,6 +423,8 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
+  ];
+
 export const authorityBadges: AuthorityBadge[] = [
   {
     code: 'DM',
