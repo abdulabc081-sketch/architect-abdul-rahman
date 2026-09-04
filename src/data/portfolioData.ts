@@ -21,6 +21,16 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import degrootCoverImg from '../assets/images/degrootconcordtowerCover.jpg';
+import degrootPhoto1Img from '../assets/images/degrootconcordtower_photo1.jpg';
+import degrootPhoto2Img from '../assets/images/degrootconcordtower_photo2.jpg';
+import degrootPhoto3Img from '../assets/images/degrootconcordtower_photo3.jpg';
+import degrootPhoto4Img from '../assets/images/degrootconcordtower_photo4.jpg';
+import degrootPhoto5Img from '../assets/images/degrootconcordtower_photo5.jpg';
+import degrootPhoto6Img from '../assets/images/degrootconcordtower_photo6.jpg';
+import degrootPhoto7Img from '../assets/images/degrootconcordtower_photo7.jpg';
+import degrootPhoto8Img from '../assets/images/degrootconcordtower_photo8.jpg';
+import degrootPhoto9Img from '../assets/images/degrootconcordtower_photo9.jpg';
 import samaCoverImg from '../assets/images/samatowerCover.jpg';
 import samaPhoto1Img from '../assets/images/samatower_photo1.jpg';
 import samaPhoto2Img from '../assets/images/samatower_photo2.jpg';
@@ -387,7 +397,33 @@ export const projectsData: Project[] = [
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
 ];
-
+  {
+    id: 'degroot-office-1103',
+    title: 'DEGROOT OFFICE -1103',
+    subtitle: 'Corporate Office Fit-Out at Concord Tower',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    year: '',
+    location: 'Concord Tower, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: degrootCoverImg,
+    gallery: [
+      degrootPhoto1Img,
+      degrootPhoto2Img,
+      degrootPhoto3Img,
+      degrootPhoto4Img,
+      degrootPhoto5Img,
+      degrootPhoto6Img,
+      degrootPhoto7Img,
+      degrootPhoto8Img,
+      degrootPhoto9Img,
+    ],
+    summary: 'A contemporary workplace for Degroot designed around clarity, collaboration, and focused productivity, combining refined materiality with flexible spatial planning across private offices, workstations, and meeting areas.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
 export const authorityBadges: AuthorityBadge[] = [
   {
     code: 'DM',
