@@ -467,18 +467,18 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-    {
+  {
     id: 'g1lineshipping-office',
     title: 'G1LINE SHIPPING OFFICE',
     subtitle: 'Corporate Office Fit-Out at Oasis Center',
     category: 'Commercial',
     tag: 'COMMERCIAL',
     year: '',
-    location: 'Oud metha, Dubai, UAE',
+    location: 'Oasis Center, Dubai, UAE',
     role: 'Project Architect',
     area: '',
     status: 'Completed',
-    image: g1lineshippingImg,
+    image: g1lineshippingCoverImg,
     gallery: [
       g1lineshippingPhoto1Img,
       g1lineshippingPhoto2Img,
