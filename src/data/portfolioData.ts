@@ -396,7 +396,6 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Omniyat'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-];
   {
     id: 'degroot-office-1103',
     title: 'DEGROOT OFFICE -1103',
