@@ -21,6 +21,13 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import g1lineshippingCoverImg from '../assets/images/g1lineshippingCover.jpg';
+import g1lineshippingPhoto1Img from '../assets/images/g1lineshipping_photo1.jpg';
+import g1lineshippingPhoto2Img from '../assets/images/g1lineshipping_photo2.jpg';
+import g1lineshippingPhoto3Img from '../assets/images/g1lineshipping_photo3.jpg';
+import g1lineshippingPhoto4Img from '../assets/images/g1lineshipping_photo4.jpg';
+import g1lineshippingPhoto5Img from '../assets/images/g1lineshipping_photo5.jpg';
+import g1lineshippingPhoto6Img from '../assets/images/g1lineshipping_photo6.jpg';
 import pearlshireCoverImg from '../assets/images/pearlshireofficeoasiscenterCover.jpg';
 import pearlshirePhoto1Img from '../assets/images/pearlshireofficeoasiscenter_photo1.jpg';
 import pearlshirePhoto2Img from '../assets/images/pearlshireofficeoasiscenter_photo2.jpg';
@@ -460,7 +467,31 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-  ];
+    {
+    id: 'g1lineshipping-office',
+    title: 'G1LINE SHIPPING OFFICE',
+    subtitle: 'Corporate Office Fit-Out at Oasis Center',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    year: '',
+    location: 'Oud metha, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: g1lineshippingImg,
+    gallery: [
+      g1lineshippingPhoto1Img,
+      g1lineshippingPhoto2Img,
+      g1lineshippingPhoto3Img,
+      g1lineshippingPhoto4Img,
+      g1lineshippingPhoto5Img,
+      g1lineshippingPhoto6Img,
+    ],
+    summary: 'A thoughtfully planned corporate office space designed to balance collaboration, focus, and functionality, integrating reception, meeting space, workstations, and executive cabins within an efficient spatial arrangement.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+];
 export const authorityBadges: AuthorityBadge[] = [
   {
     code: 'DM',
