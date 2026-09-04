@@ -433,7 +433,6 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-  ];
   {
     id: 'pearlshire-office-09',
     title: 'PEARLSHIRE OFFICE -09',
@@ -461,6 +460,7 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
+  ];
 export const authorityBadges: AuthorityBadge[] = [
   {
     code: 'DM',
