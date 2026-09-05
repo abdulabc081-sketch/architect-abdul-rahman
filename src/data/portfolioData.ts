@@ -21,6 +21,15 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import angelHomesCoverImg from '../assets/images/angelhomesCover.jpg';
+import angelHomesPhoto1Img from '../assets/images/angelhomes_photo1.jpg';
+import angelHomesPhoto2Img from '../assets/images/angelhomes_photo2.jpg';
+import angelHomesPhoto3Img from '../assets/images/angelhomes_photo3.jpg';
+import angelHomesPhoto4Img from '../assets/images/angelhomes_photo4.jpg';
+import angelHomesPhoto5Img from '../assets/images/angelhomes_photo5.jpg';
+import angelHomesPhoto6Img from '../assets/images/angelhomes_photo6.jpg';
+import angelHomesPhoto7Img from '../assets/images/angelhomes_photo7.jpg';
+import angelHomesPhoto8Img from '../assets/images/angelhomes_photo8.jpg';
 import g1lineshippingCoverImg from '../assets/images/g1lineshippingCover.jpg';
 import g1lineshippingPhoto1Img from '../assets/images/g1lineshipping_photo1.jpg';
 import g1lineshippingPhoto2Img from '../assets/images/g1lineshipping_photo2.jpg';
@@ -465,6 +474,32 @@ export const projectsData: Project[] = [
     ],
     summary: 'A thoughtfully planned corporate office space designed to balance collaboration, focus, and functionality, integrating reception, meeting space, workstations, and executive cabins within an efficient spatial arrangement.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'angel-homes-showroom',
+    title: 'ANGEL HOMES',
+    subtitle: 'Furniture Showroom & Office',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    year: '',
+    location: 'Al Quoz, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: angelHomesCoverImg,
+    gallery: [
+      angelHomesPhoto1Img,
+      angelHomesPhoto2Img,
+      angelHomesPhoto3Img,
+      angelHomesPhoto4Img,
+      angelHomesPhoto5Img,
+      angelHomesPhoto6Img,
+      angelHomesPhoto7Img,
+      angelHomesPhoto8Img,
+    ],
+    summary: 'A contemporary furniture showroom and corporate office designed to create a refined, welcoming environment reflecting the brand\'s focus on quality, comfort, and modern living, combining natural wood, elegant stone, and carefully integrated lighting.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Goshi Warehouse'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
   {
