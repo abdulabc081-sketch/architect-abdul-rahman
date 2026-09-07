@@ -21,6 +21,20 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import rosaArtCoverImg from '../assets/images/rosaartCover.jpg';
+import rosaArtPhoto1Img from '../assets/images/rosaart_photo1.jpg';
+import rosaArtPhoto2Img from '../assets/images/rosaart_photo2.jpg';
+import rosaArtPhoto3Img from '../assets/images/rosaart_photo3.jpg';
+import rosaArtPhoto4Img from '../assets/images/rosaart_photo4.jpg';
+import rosaArtPhoto5Img from '../assets/images/rosaart_photo5.jpg';
+import rosaArtPhoto6Img from '../assets/images/rosaart_photo6.jpg';
+import rosaArtPhoto7Img from '../assets/images/rosaart_photo7.jpg';
+import rosaArtPhoto8Img from '../assets/images/rosaart_photo8.jpg';
+import rosaArtPhoto9Img from '../assets/images/rosaart_photo9.jpg';
+import rosaArtPhoto10Img from '../assets/images/rosaart_photo10.jpg';
+import rosaArtPhoto11Img from '../assets/images/rosaart_photo11.jpg';
+import rosaArtPhoto12Img from '../assets/images/rosaart_photo12.jpg';
+import rosaArtPhoto13Img from '../assets/images/rosaart_photo13.jpg';
 import angelHomesCoverImg from '../assets/images/angelhomesCover.jpg';
 import angelHomesPhoto1Img from '../assets/images/angelhomes_photo1.jpg';
 import angelHomesPhoto2Img from '../assets/images/angelhomes_photo2.jpg';
@@ -476,7 +490,38 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-    {
+   {
+    id: 'rosa-art-showroom',
+    title: 'ROSA ART',
+    subtitle: 'Flower Shop & Corporate Office',
+    category: 'Commercial',
+    tag: 'COMMERCIAL',
+    year: '',
+    location: 'Al Quoz, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: rosaArtCoverImg,
+    gallery: [
+      rosaArtPhoto1Img,
+      rosaArtPhoto2Img,
+      rosaArtPhoto3Img,
+      rosaArtPhoto4Img,
+      rosaArtPhoto5Img,
+      rosaArtPhoto6Img,
+      rosaArtPhoto7Img,
+      rosaArtPhoto8Img,
+      rosaArtPhoto9Img,
+      rosaArtPhoto10Img,
+      rosaArtPhoto11Img,
+      rosaArtPhoto12Img,
+      rosaArtPhoto13Img,
+    ],
+    summary: 'A contemporary flower boutique and corporate office designed to create an immersive connection between nature, creativity, and refined retail, with a ground floor retail environment for curated flower displays and a first floor professional workspace for the team.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Goshi Warehouse'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+  {
     id: 'angel-homes-showroom',
     title: 'ANGEL HOMES',
     subtitle: 'Furniture Showroom & Office',
