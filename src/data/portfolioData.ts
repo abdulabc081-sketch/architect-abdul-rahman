@@ -21,6 +21,16 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import fashionAvenueCoverImg from '../assets/images/fashionavenuedubaimallresidenceCover.jpg';
+import fashionAvenuePhoto1Img from '../assets/images/fashionavenuedubaimallresidence_photo1.jpg';
+import fashionAvenuePhoto2Img from '../assets/images/fashionavenuedubaimallresidence_photo2.jpg';
+import fashionAvenuePhoto3Img from '../assets/images/fashionavenuedubaimallresidence_photo3.jpg';
+import fashionAvenuePhoto4Img from '../assets/images/fashionavenuedubaimallresidence_photo4.jpg';
+import fashionAvenuePhoto5Img from '../assets/images/fashionavenuedubaimallresidence_photo5.jpg';
+import fashionAvenuePhoto6Img from '../assets/images/fashionavenuedubaimallresidence_photo6.jpg';
+import fashionAvenuePhoto7Img from '../assets/images/fashionavenuedubaimallresidence_photo7.jpg';
+import fashionAvenuePhoto8Img from '../assets/images/fashionavenuedubaimallresidence_photo8.jpg';
+import fashionAvenuePhoto9Img from '../assets/images/fashionavenuedubaimallresidence_photo9.jpg';
 import jumeirahHeightsWestCCoverImg from '../assets/images/jumeirahheightswestcCover.jpg';
 import jumeirahHeightsWestCPhoto1Img from '../assets/images/jumeirahheightswestc_photo1.jpg';
 import jumeirahHeightsWestCPhoto2Img from '../assets/images/jumeirahheightswestc_photo2.jpg';
@@ -495,6 +505,33 @@ export const projectsData: Project[] = [
       urbanoasisbuildingPhoto12Img,
     ],
     summary: 'A contemporary residential apartment development designed to create a calm and comfortable living environment within an urban setting, focusing on efficient space utilization, functional circulation, natural light, and privacy across living, dining, kitchen, and bedroom spaces.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'fashion-avenue-dubai-mall-residence',
+    title: 'FASHION AVENUE',
+    subtitle: 'Dubai Mall Residence Interior Design',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Fashion Avenue Dubai Mall Residence, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: fashionAvenueCoverImg,
+    gallery: [
+      fashionAvenuePhoto1Img,
+      fashionAvenuePhoto2Img,
+      fashionAvenuePhoto3Img,
+      fashionAvenuePhoto4Img,
+      fashionAvenuePhoto5Img,
+      fashionAvenuePhoto6Img,
+      fashionAvenuePhoto7Img,
+      fashionAvenuePhoto8Img,
+      fashionAvenuePhoto9Img,
+    ],
+    summary: 'A refined luxury residence within the prestigious Fashion Avenue at Dubai Mall, combining contemporary elegance with a warm, sophisticated atmosphere across an open-plan living, dining, and kitchen environment and a private, comfort-focused bedroom.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
