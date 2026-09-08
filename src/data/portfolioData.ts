@@ -21,6 +21,16 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import district1residence7CoverImg from '../assets/images/district1residence7Cover.jpg';
+import district1residence7Photo1Img from '../assets/images/district1residence7_photo1.jpg';
+import district1residence7Photo2Img from '../assets/images/district1residence7_photo2.jpg';
+import district1residence7Photo3Img from '../assets/images/district1residence7_photo3.jpg';
+import district1residence7Photo4Img from '../assets/images/district1residence7_photo4.jpg';
+import district1residence7Photo5Img from '../assets/images/district1residence7_photo5.jpg';
+import district1residence7Photo6Img from '../assets/images/district1residence7_photo6.jpg';
+import district1residence7Photo7Img from '../assets/images/district1residence7_photo7.jpg';
+import district1residence7Photo8Img from '../assets/images/district1residence7_photo8.jpg';
+import district1residence7Photo9Img from '../assets/images/district1residence7_photo9.jpg';
 import rosaArtCoverImg from '../assets/images/rosaartCover.jpg';
 import rosaArtPhoto1Img from '../assets/images/rosaart_photo1.jpg';
 import rosaArtPhoto2Img from '../assets/images/rosaart_photo2.jpg';
@@ -377,7 +387,33 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Omniyat'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-    {
+     {
+    id: 'district1-residence7',
+    title: 'DISTRICT 01 RESIDENCE 07',
+    subtitle: 'Contemporary Residential Interior Design',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'District 01, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: district1residence7CoverImg,
+    gallery: [
+      district1residence7Photo2Img,
+      district1residence7Photo3Img,
+      district1residence7Photo4Img,
+      district1residence7Photo5Img,
+      district1residence7Photo6Img,
+      district1residence7Photo7Img,
+      district1residence7Photo8Img,
+      district1residence7Photo9Img,
+    ],
+    summary: 'A thoughtfully planned residential interior designed to achieve a balance between comfort, functionality, privacy, and contemporary living, organizing the home into clearly defined living, dining, kitchen, bedroom, and service zones while maintaining a smooth connection between shared and private spaces.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+  {
     id: 'burj-al-salam-office-806',
     title: 'BURJ AL SALAM OFFICE -806',
     subtitle: 'VIVENT Luxury Retail Store at Burj Al Salam',
