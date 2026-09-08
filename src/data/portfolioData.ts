@@ -468,7 +468,7 @@ export const projectsData: Project[] = [
     role: 'Project Architect',
     area: '',
     status: 'Completed',
-    image: urbanOasisCoverImg,
+    image: urbanoasisbuildingCoverImg,
     gallery: [
       urbanoasisbuildingPhoto1Img,
       urbanoasisbuildingPhoto2Img,
