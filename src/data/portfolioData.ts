@@ -21,6 +21,17 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import jumeirahHeightsWestCCoverImg from '../assets/images/jumeirahheightswestcCover.jpg';
+import jumeirahHeightsWestCPhoto1Img from '../assets/images/jumeirahheightswestc_photo1.jpg';
+import jumeirahHeightsWestCPhoto2Img from '../assets/images/jumeirahheightswestc_photo2.jpg';
+import jumeirahHeightsWestCPhoto3Img from '../assets/images/jumeirahheightswestc_photo3.jpg';
+import jumeirahHeightsWestCPhoto4Img from '../assets/images/jumeirahheightswestc_photo4.jpg';
+import jumeirahHeightsWestCPhoto5Img from '../assets/images/jumeirahheightswestc_photo5.jpg';
+import jumeirahHeightsWestCPhoto6Img from '../assets/images/jumeirahheightswestc_photo6.jpg';
+import jumeirahHeightsWestCPhoto7Img from '../assets/images/jumeirahheightswestc_photo7.jpg';
+import jumeirahHeightsWestCPhoto8Img from '../assets/images/jumeirahheightswestc_photo8.jpg';
+import jumeirahHeightsWestCPhoto9Img from '../assets/images/jumeirahheightswestc_photo9.jpg';
+import jumeirahHeightsWestCPhoto10Img from '../assets/images/jumeirahheightswestc_photo10.jpg';
 import urbanoasisbuildingCoverImg from '../assets/images/urbanoasisbuildingCover.jpg';
 import urbanoasisbuildingPhoto1Img from '../assets/images/urbanoasisbuilding_photo1.jpg';
 import urbanoasisbuildingPhoto2Img from '../assets/images/urbanoasisbuilding_photo2.jpg';
@@ -625,6 +636,34 @@ export const projectsData: Project[] = [
     ],
     summary: 'A contemporary furniture showroom and corporate office designed to create a refined, welcoming environment reflecting the brand\'s focus on quality, comfort, and modern living, combining natural wood, elegant stone, and carefully integrated lighting.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'Goshi Warehouse'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'jumeirah-heights-west-c',
+    title: 'JUMEIRAH HEIGHTS WEST',
+    subtitle: 'Contemporary Residential Interior Design',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Jumeirah Heights, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: jumeirahHeightsWestCCoverImg,
+    gallery: [
+      jumeirahHeightsWestCPhoto1Img,
+      jumeirahHeightsWestCPhoto2Img,
+      jumeirahHeightsWestCPhoto3Img,
+      jumeirahHeightsWestCPhoto4Img,
+      jumeirahHeightsWestCPhoto5Img,
+      jumeirahHeightsWestCPhoto6Img,
+      jumeirahHeightsWestCPhoto7Img,
+      jumeirahHeightsWestCPhoto8Img,
+      jumeirahHeightsWestCPhoto9Img,
+      jumeirahHeightsWestCPhoto10Img,
+    ],
+    summary: 'A refined residential interior fit-out featuring a dramatic double-height staircase wall, matte-black joinery, and warm marble accents that carry through the entryway, kitchen, and spa-inspired bathrooms.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
   {
