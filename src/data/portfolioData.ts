@@ -22,6 +22,7 @@ import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
 import urbanOasisCoverImg from '../assets/images/urbanoasisbuildingCover.jpg';
+import urbanOasisPhoto2Img from '../assets/images/urbanoasisbuilding_photo1.jpg';
 import urbanOasisPhoto2Img from '../assets/images/urbanoasisbuilding_photo2.jpg';
 import urbanOasisPhoto3Img from '../assets/images/urbanoasisbuilding_photo3.jpg';
 import urbanOasisPhoto4Img from '../assets/images/urbanoasisbuilding_photo4.jpg';
