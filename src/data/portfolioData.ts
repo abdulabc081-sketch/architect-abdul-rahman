@@ -21,6 +21,18 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import urbanOasisCoverImg from '../assets/images/urbanoasisbuildingCover.jpg';
+import urbanOasisPhoto2Img from '../assets/images/urbanoasisbuilding_photo2.jpg';
+import urbanOasisPhoto3Img from '../assets/images/urbanoasisbuilding_photo3.jpg';
+import urbanOasisPhoto4Img from '../assets/images/urbanoasisbuilding_photo4.jpg';
+import urbanOasisPhoto5Img from '../assets/images/urbanoasisbuilding_photo5.jpg';
+import urbanOasisPhoto6Img from '../assets/images/urbanoasisbuilding_photo6.jpg';
+import urbanOasisPhoto7Img from '../assets/images/urbanoasisbuilding_photo7.jpg';
+import urbanOasisPhoto8Img from '../assets/images/urbanoasisbuilding_photo8.jpg';
+import urbanOasisPhoto9Img from '../assets/images/urbanoasisbuilding_photo9.jpg';
+import urbanOasisPhoto10Img from '../assets/images/urbanoasisbuilding_photo10.jpg';
+import urbanOasisPhoto11Img from '../assets/images/urbanoasisbuilding_photo11.jpg';
+import urbanOasisPhoto12Img from '../assets/images/urbanoasisbuilding_photo12.jpg';
 import district1residence7CoverImg from '../assets/images/district1residence7Cover.jpg';
 import district1residence7Photo1Img from '../assets/images/district1residence7_photo1.jpg';
 import district1residence7Photo2Img from '../assets/images/district1residence7_photo2.jpg';
@@ -442,6 +454,36 @@ export const projectsData: Project[] = [
     ],
     summary: 'VIVENT is a premium retail destination for luxury bags and watches, designed with warm tones, rich materials, and sophisticated lighting to reflect the brand\'s commitment to quality and timeless luxury.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence', 'SRG Holdings'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'urban-oasis',
+    title: 'URBAN OASIS',
+    subtitle: 'Residential Apartment Building Interior Design',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Urban Oasis Building, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: urbanOasisCoverImg,
+    gallery: [
+      urbanOasisPhoto1Img,
+      urbanOasisPhoto2Img,
+      urbanOasisPhoto3Img,
+      urbanOasisPhoto4Img,
+      urbanOasisPhoto5Img,
+      urbanOasisPhoto6Img,
+      urbanOasisPhoto7Img,
+      urbanOasisPhoto8Img,
+      urbanOasisPhoto9Img,
+      urbanOasisPhoto10Img,
+      urbanOasisPhoto11Img,
+      urbanOasisPhoto12Img,
+    ],
+    summary: 'A contemporary residential apartment development designed to create a calm and comfortable living environment within an urban setting, focusing on efficient space utilization, functional circulation, natural light, and privacy across living, dining, kitchen, and bedroom spaces.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
   {
