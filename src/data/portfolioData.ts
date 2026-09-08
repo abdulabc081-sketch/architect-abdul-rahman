@@ -400,6 +400,7 @@ export const projectsData: Project[] = [
     status: 'Completed',
     image: district1residence7CoverImg,
     gallery: [
+      district1residence7Photo1Img,
       district1residence7Photo2Img,
       district1residence7Photo3Img,
       district1residence7Photo4Img,
