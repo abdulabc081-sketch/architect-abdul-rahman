@@ -35,6 +35,7 @@ import arabianRanchesVilla69Photo10Img from '../assets/images/arabianranchesvill
 import arabianRanchesVilla69Photo11Img from '../assets/images/arabianranchesvilla69_photo11.jpg';
 import arabianRanchesVilla69Photo12Img from '../assets/images/arabianranchesvilla69_photo12.jpg';
 import arabianRanchesVilla69Photo13Img from '../assets/images/arabianranchesvilla69_photo13.jpg';
+import arabianRanchesVilla69Photo14Img from '../assets/images/arabianranchesvilla69_photo14.jpg';
 import fashionAvenueCoverImg from '../assets/images/fashionavenuedubaimallresidenceCover.jpg';
 import fashionAvenuePhoto1Img from '../assets/images/fashionavenuedubaimallresidence_photo1.jpg';
 import fashionAvenuePhoto2Img from '../assets/images/fashionavenuedubaimallresidence_photo2.jpg';
@@ -488,6 +489,7 @@ export const projectsData: Project[] = [
       arabianRanchesVilla69Photo11Img,
       arabianRanchesVilla69Photo12Img,
       arabianRanchesVilla69Photo13Img,
+      arabianRanchesVilla69Photo14Img,
     ],
     summary: 'A refined residential villa designed around family living, privacy, comfort, and functional spatial planning, with formal and family areas on the ground floor and private accommodation including a master suite, additional bedroom, dressing areas, and balconies on the upper floor.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
