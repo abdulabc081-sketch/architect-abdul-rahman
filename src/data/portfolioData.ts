@@ -21,6 +21,27 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import downtownView4906CoverImg from '../assets/images/downtownviewappartment4906Cover.jpg';
+import downtownView4906Photo1Img from '../assets/images/downtownviewappartment4906_photo1.jpg';
+import downtownView4906Photo2Img from '../assets/images/downtownviewappartment4906_photo2.jpg';
+import downtownView4906Photo3Img from '../assets/images/downtownviewappartment4906_photo3.jpg';
+import downtownView4906Photo4Img from '../assets/images/downtownviewappartment4906_photo4.jpg';
+import downtownView4906Photo5Img from '../assets/images/downtownviewappartment4906_photo5.jpg';
+import downtownView4906Photo6Img from '../assets/images/downtownviewappartment4906_photo6.jpg';
+import downtownView4906Photo7Img from '../assets/images/downtownviewappartment4906_photo7.jpg';
+import downtownView4906Photo8Img from '../assets/images/downtownviewappartment4906_photo8.jpg';
+import downtownView4906Photo9Img from '../assets/images/downtownviewappartment4906_photo9.jpg';
+import downtownView4906Photo10Img from '../assets/images/downtownviewappartment4906_photo10.jpg';
+import downtownView4906Photo11Img from '../assets/images/downtownviewappartment4906_photo11.jpg';
+import downtownView4906Photo12Img from '../assets/images/downtownviewappartment4906_photo12.jpg';
+import downtownView4906Photo13Img from '../assets/images/downtownviewappartment4906_photo13.jpg';
+import downtownView4906Photo14Img from '../assets/images/downtownviewappartment4906_photo14.jpg';
+import downtownView4906Photo15Img from '../assets/images/downtownviewappartment4906_photo15.jpg';
+import downtownView4906Photo16Img from '../assets/images/downtownviewappartment4906_photo16.jpg';
+import downtownView4906Photo17Img from '../assets/images/downtownviewappartment4906_photo17.jpg';
+import downtownView4906Photo18Img from '../assets/images/downtownviewappartment4906_photo18.jpg';
+import downtownView4906Photo19Img from '../assets/images/downtownviewappartment4906_photo19.jpg';
+import downtownView4906Photo20Img from '../assets/images/downtownviewappartment4906_photo20.jpg';
 import arabianRanchesVilla69CoverImg from '../assets/images/arabianranchesvilla69Cover.jpg';
 import arabianRanchesVilla69Photo1Img from '../assets/images/arabianranchesvilla69_photo1.jpg';
 import arabianRanchesVilla69Photo2Img from '../assets/images/arabianranchesvilla69_photo2.jpg';
@@ -463,7 +484,45 @@ export const projectsData: Project[] = [
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
-    {
+      {
+    id: 'downtown-view-ii-apartment-4906',
+    title: 'DOWNTOWN VIEW II APARTMENT',
+    subtitle: 'Luxury Residential · 3-Bedroom Apartment',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Downtown View II, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: downtownView4906CoverImg,
+    gallery: [
+      downtownView4906Photo1Img,
+      downtownView4906Photo2Img,
+      downtownView4906Photo3Img,
+      downtownView4906Photo4Img,
+      downtownView4906Photo5Img,
+      downtownView4906Photo6Img,
+      downtownView4906Photo7Img,
+      downtownView4906Photo8Img,
+      downtownView4906Photo9Img,
+      downtownView4906Photo10Img,
+      downtownView4906Photo11Img,
+      downtownView4906Photo12Img,
+      downtownView4906Photo13Img,
+      downtownView4906Photo14Img,
+      downtownView4906Photo15Img,
+      downtownView4906Photo16Img,
+      downtownView4906Photo17Img,
+      downtownView4906Photo18Img,
+      downtownView4906Photo19Img,
+      downtownView4906Photo20Img,
+    ],
+    summary: 'A contemporary 3-bedroom residence in Downtown Dubai combining sophisticated aesthetics with comfortable, functional family living, organized around a generous open-plan living, dining, and kitchen zone with privately positioned bedrooms and dedicated bathrooms.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+  {
     id: 'arabian-ranches-villa-69',
     title: 'ARABIAN RANCHES VILLA 69',
     subtitle: 'Luxury Residential Villa',
