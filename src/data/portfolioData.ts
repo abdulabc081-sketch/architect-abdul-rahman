@@ -21,6 +21,20 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import arabianRanchesVilla69CoverImg from '../assets/images/arabianranchesvilla69Cover.jpg';
+import arabianRanchesVilla69Photo1Img from '../assets/images/arabianranchesvilla69_photo1.jpg';
+import arabianRanchesVilla69Photo2Img from '../assets/images/arabianranchesvilla69_photo2.jpg';
+import arabianRanchesVilla69Photo3Img from '../assets/images/arabianranchesvilla69_photo3.jpg';
+import arabianRanchesVilla69Photo4Img from '../assets/images/arabianranchesvilla69_photo4.jpg';
+import arabianRanchesVilla69Photo5Img from '../assets/images/arabianranchesvilla69_photo5.jpg';
+import arabianRanchesVilla69Photo6Img from '../assets/images/arabianranchesvilla69_photo6.jpg';
+import arabianRanchesVilla69Photo7Img from '../assets/images/arabianranchesvilla69_photo7.jpg';
+import arabianRanchesVilla69Photo8Img from '../assets/images/arabianranchesvilla69_photo8.jpg';
+import arabianRanchesVilla69Photo9Img from '../assets/images/arabianranchesvilla69_photo9.jpg';
+import arabianRanchesVilla69Photo10Img from '../assets/images/arabianranchesvilla69_photo10.jpg';
+import arabianRanchesVilla69Photo11Img from '../assets/images/arabianranchesvilla69_photo11.jpg';
+import arabianRanchesVilla69Photo12Img from '../assets/images/arabianranchesvilla69_photo12.jpg';
+import arabianRanchesVilla69Photo13Img from '../assets/images/arabianranchesvilla69_photo13.jpg';
 import fashionAvenueCoverImg from '../assets/images/fashionavenuedubaimallresidenceCover.jpg';
 import fashionAvenuePhoto1Img from '../assets/images/fashionavenuedubaimallresidence_photo1.jpg';
 import fashionAvenuePhoto2Img from '../assets/images/fashionavenuedubaimallresidence_photo2.jpg';
@@ -445,6 +459,37 @@ export const projectsData: Project[] = [
       district1residence7Photo9Img,
     ],
     summary: 'A thoughtfully planned residential interior designed to achieve a balance between comfort, functionality, privacy, and contemporary living, organizing the home into clearly defined living, dining, kitchen, bedroom, and service zones while maintaining a smooth connection between shared and private spaces.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'arabian-ranches-villa-69',
+    title: 'ARABIAN RANCHES VILLA 69',
+    subtitle: 'Luxury Residential Villa',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Arabian Ranches, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: arabianRanchesVilla69CoverImg,
+    gallery: [
+      arabianRanchesVilla69Photo1Img,
+      arabianRanchesVilla69Photo2Img,
+      arabianRanchesVilla69Photo3Img,
+      arabianRanchesVilla69Photo4Img,
+      arabianRanchesVilla69Photo5Img,
+      arabianRanchesVilla69Photo6Img,
+      arabianRanchesVilla69Photo7Img,
+      arabianRanchesVilla69Photo8Img,
+      arabianRanchesVilla69Photo9Img,
+      arabianRanchesVilla69Photo10Img,
+      arabianRanchesVilla69Photo11Img,
+      arabianRanchesVilla69Photo12Img,
+      arabianRanchesVilla69Photo13Img,
+    ],
+    summary: 'A refined residential villa designed around family living, privacy, comfort, and functional spatial planning, with formal and family areas on the ground floor and private accommodation including a master suite, additional bedroom, dressing areas, and balconies on the upper floor.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
