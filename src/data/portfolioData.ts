@@ -21,6 +21,24 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import muhaisinahVillaCoverImg from '../assets/images/muhaisinahvillaCover.jpg';
+import muhaisinahVillaPhoto1Img from '../assets/images/muhaisinahvilla_photo1.jpg';
+import muhaisinahVillaPhoto2Img from '../assets/images/muhaisinahvilla_photo2.jpg';
+import muhaisinahVillaPhoto3Img from '../assets/images/muhaisinahvilla_photo3.jpg';
+import muhaisinahVillaPhoto4Img from '../assets/images/muhaisinahvilla_photo4.jpg';
+import muhaisinahVillaPhoto5Img from '../assets/images/muhaisinahvilla_photo5.jpg';
+import muhaisinahVillaPhoto6Img from '../assets/images/muhaisinahvilla_photo6.jpg';
+import muhaisinahVillaPhoto7Img from '../assets/images/muhaisinahvilla_photo7.jpg';
+import muhaisinahVillaPhoto8Img from '../assets/images/muhaisinahvilla_photo8.jpg';
+import muhaisinahVillaPhoto9Img from '../assets/images/muhaisinahvilla_photo9.jpg';
+import muhaisinahVillaPhoto10Img from '../assets/images/muhaisinahvilla_photo10.jpg';
+import muhaisinahVillaPhoto11Img from '../assets/images/muhaisinahvilla_photo11.jpg';
+import muhaisinahVillaPhoto12Img from '../assets/images/muhaisinahvilla_photo12.jpg';
+import muhaisinahVillaPhoto13Img from '../assets/images/muhaisinahvilla_photo13.jpg';
+import muhaisinahVillaPhoto14Img from '../assets/images/muhaisinahvilla_photo14.jpg';
+import muhaisinahVillaPhoto15Img from '../assets/images/muhaisinahvilla_photo15.jpg';
+import muhaisinahVillaPhoto16Img from '../assets/images/muhaisinahvilla_photo16.jpg';
+import muhaisinahVillaPhoto17Img from '../assets/images/muhaisinahvilla_photo17.jpg';
 import downtownView4906CoverImg from '../assets/images/downtownviewappartment4906Cover.jpg';
 import downtownView4906Photo1Img from '../assets/images/downtownviewappartment4906_photo1.jpg';
 import downtownView4906Photo2Img from '../assets/images/downtownviewappartment4906_photo2.jpg';
@@ -638,6 +656,41 @@ export const projectsData: Project[] = [
       fashionAvenuePhoto9Img,
     ],
     summary: 'A refined luxury residence within the prestigious Fashion Avenue at Dubai Mall, combining contemporary elegance with a warm, sophisticated atmosphere across an open-plan living, dining, and kitchen environment and a private, comfort-focused bedroom.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'muhaisinah-villa',
+    title: 'MUHAISINAH VILLA',
+    subtitle: '5-Bedroom Luxury Villa with Majlis',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Muhaisinah, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: muhaisinahVillaCoverImg,
+    gallery: [
+      muhaisinahVillaPhoto1Img,
+      muhaisinahVillaPhoto2Img,
+      muhaisinahVillaPhoto3Img,
+      muhaisinahVillaPhoto4Img,
+      muhaisinahVillaPhoto5Img,
+      muhaisinahVillaPhoto6Img,
+      muhaisinahVillaPhoto7Img,
+      muhaisinahVillaPhoto8Img,
+      muhaisinahVillaPhoto9Img,
+      muhaisinahVillaPhoto10Img,
+      muhaisinahVillaPhoto11Img,
+      muhaisinahVillaPhoto12Img,
+      muhaisinahVillaPhoto13Img,
+      muhaisinahVillaPhoto14Img,
+      muhaisinahVillaPhoto15Img,
+      muhaisinahVillaPhoto16Img,
+      muhaisinahVillaPhoto17Img,
+    ],
+    summary: 'A contemporary 5-bedroom family residence in Muhaisinah combining modern architectural expression with traditional Emirati family living — formal guest areas and a dedicated majlis separated from private family spaces, with a facade of clean lines, warm stone textures, timber-inspired elements, and integrated lighting.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
