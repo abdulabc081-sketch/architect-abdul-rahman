@@ -21,6 +21,17 @@ import binaryPhoto11Img from '../assets/images/binarybuilding_photo11.jpg';
 import binaryPhoto12Img from '../assets/images/binarybuilding_photo12.jpg';
 import retailComplexImg from '../assets/images/retail_complex_aurun_1788238872897.jpg';
 import restaurantInteriorImg from '../assets/images/restaurant_interior_jumeirah_1788238885620.jpg';
+import mirdif1bhkCoverImg from '../assets/images/mirdif1bhkCover.jpg';
+import mirdif1bhkPhoto1Img from '../assets/images/mirdif1bhk_photo1.jpg';
+import mirdif1bhkPhoto2Img from '../assets/images/mirdif1bhk_photo2.jpg';
+import mirdif1bhkPhoto3Img from '../assets/images/mirdif1bhk_photo3.jpg';
+import mirdif1bhkPhoto4Img from '../assets/images/mirdif1bhk_photo4.jpg';
+import mirdif1bhkPhoto5Img from '../assets/images/mirdif1bhk_photo5.jpg';
+import mirdif1bhkPhoto6Img from '../assets/images/mirdif1bhk_photo6.jpg';
+import mirdif1bhkPhoto7Img from '../assets/images/mirdif1bhk_photo7.jpg';
+import mirdif1bhkPhoto8Img from '../assets/images/mirdif1bhk_photo8.jpg';
+import mirdif1bhkPhoto9Img from '../assets/images/mirdif1bhk_photo9.jpg';
+import mirdif1bhkPhoto10Img from '../assets/images/mirdif1bhk_photo10.jpg';
 import muhaisinahVillaCoverImg from '../assets/images/muhaisinahvillaCover.jpg';
 import muhaisinahVillaPhoto1Img from '../assets/images/muhaisinahvilla_photo1.jpg';
 import muhaisinahVillaPhoto2Img from '../assets/images/muhaisinahvilla_photo2.jpg';
@@ -859,6 +870,34 @@ export const projectsData: Project[] = [
       jumeirahHeightsWestCPhoto10Img,
     ],
     summary: 'A refined residential interior fit-out featuring a dramatic double-height staircase wall, matte-black joinery, and warm marble accents that carry through the entryway, kitchen, and spa-inspired bathrooms.',
+    authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
+    software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
+  },
+    {
+    id: 'mirdif-apartment',
+    title: 'MIRDIF APARTMENT',
+    subtitle: 'One Bedroom Residential Apartment',
+    category: 'Residential',
+    tag: 'RESIDENTIAL',
+    year: '',
+    location: 'Mirdif, Dubai, UAE',
+    role: 'Project Architect',
+    area: '',
+    status: 'Completed',
+    image: mirdif1bhkCoverImg,
+    gallery: [
+      mirdif1bhkPhoto1Img,
+      mirdif1bhkPhoto2Img,
+      mirdif1bhkPhoto3Img,
+      mirdif1bhkPhoto4Img,
+      mirdif1bhkPhoto5Img,
+      mirdif1bhkPhoto6Img,
+      mirdif1bhkPhoto7Img,
+      mirdif1bhkPhoto8Img,
+      mirdif1bhkPhoto9Img,
+      mirdif1bhkPhoto10Img,
+    ],
+    summary: 'A thoughtfully planned 1-bedroom apartment in Mirdif designed to maximize comfort, functionality, and spatial efficiency within a compact footprint — an open flow between living, dining, and kitchen areas, a private bedroom retreat, and a warm palette of timber flooring and contemporary lighting throughout.',
     authorities: ['Dubai Municipality', 'Dubai Civil Defence'],
     software: ['AutoCAD', 'Autodesk Revit', 'Enscape', 'Adobe Photoshop'],
   },
