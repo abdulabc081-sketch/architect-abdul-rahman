@@ -129,8 +129,6 @@ export default function App() {
         onClose={() => setIsCvOpen(false)}
         isDark={isDark}
       />
-
-      <Analytics />
     </div>
   );
 }
