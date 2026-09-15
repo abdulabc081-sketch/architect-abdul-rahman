@@ -3,6 +3,7 @@ import { Download, ArrowRight } from 'lucide-react';
 import { personalInfo, portraitImg } from '../data/portfolioData';
 import { downloadCvAsPdf } from '../utils/cvPdfGenerator';
 import { motion } from 'motion/react';
+import { ParticleBackground } from './ParticleBackground';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -29,6 +30,7 @@ export const Hero: React.FC<HeroProps> = ({
       id="home"
       className="relative min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center overflow-hidden"
     >
+      <ParticleBackground isDark={isDark} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Content Column (7 cols on lg) */}
