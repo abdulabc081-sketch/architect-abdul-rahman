@@ -94,3 +94,128 @@ export const Experience: React.FC<ExperienceProps> = ({ isDark }) => {
                     className={`text-base sm:text-lg font-bold tracking-wide uppercase ${
                       isDark ? 'text-white' : 'text-neutral-900'
                     }`}
+                  >
+                    {exp.role}
+                  </h3>
+                </div>
+
+                {/* Company & Location */}
+                <div className={`text-xs sm:text-sm font-medium mb-3 ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
+                  {exp.company} • {exp.location}
+                </div>
+
+                {/* Description */}
+                <p className={`text-xs sm:text-sm leading-relaxed mb-4 text-justify ${isDark ? 'text-neutral-400' : 'text-neutral-700'}`}>
+                  {exp.description}
+                </p>
+
+                {/* Bullet Points */}
+                {exp.responsibilities && exp.responsibilities.length > 0 && (
+                  <ul className="space-y-2 mt-2">
+                    {exp.responsibilities.map((resp, rIdx) => (
+                      <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] leading-relaxed">
+                        <div
+                          className={`w-1.5 h-1.5 rounded-sm mt-1.5 flex-shrink-0 ${
+                            isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'
+                          }`}
+                        />
+                        <span className={isDark ? 'text-neutral-300' : 'text-neutral-700'}>{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right Column: Authorities Worked & Certifications (5 cols) */}
+          <div className="lg:col-span-5 space-y-8">
+            {/* Authorities Worked Block */}
+            <div
+              className={`p-6 sm:p-7 rounded-2xl border transition-all duration-300 ${
+                isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
+              }`}
+            >
+              <div className="flex items-center gap-2.5 mb-5">
+                <Building className={`w-5 h-5 ${isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'}`} />
+                <h3
+                  className={`font-cormorant text-lg sm:text-xl font-bold tracking-[0.08em] uppercase ${
+                    isDark ? 'text-white' : 'text-neutral-900'
+                  }`}
+                >
+                  AUTHORITIES WORKED
+                </h3>
+              </div>
+
+              {/* 2-col or 3-col Grid of Authority Badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {authoritiesWorked.map((auth, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-3.5 rounded-xl border text-center flex flex-col justify-center items-center transition-transform duration-200 hover:-translate-y-0.5 ${
+                      isDark
+                        ? 'bg-neutral-900/80 border-neutral-800 hover:border-[#C5A880]/50'
+                        : 'bg-neutral-50 border-neutral-200 hover:border-[#9E7D4E]/50'
+                    }`}
+                  >
+                    <span
+                      className={`text-sm font-extrabold tracking-wider mb-1 ${
+                        isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+                      }`}
+                    >
+                      {auth.code}
+                    </span>
+                    <span className="text-[11px] font-medium text-neutral-400 leading-tight mb-1" dir="rtl">
+                      {auth.arabicName}
+                    </span>
+                    <span className={`text-[9px] font-semibold tracking-wider uppercase ${isDark ? 'text-neutral-500' : 'text-neutral-600'}`}>
+                      {auth.englishName}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Certifications Block */}
+            <div
+              className={`p-6 sm:p-7 rounded-2xl border transition-all duration-300 ${
+                isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
+              }`}
+            >
+              <div className="flex items-center gap-2.5 mb-5">
+                <Award className={`w-5 h-5 ${isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'}`} />
+                <h3
+                  className={`font-cormorant text-lg sm:text-xl font-bold tracking-[0.08em] uppercase ${
+                    isDark ? 'text-white' : 'text-neutral-900'
+                  }`}
+                >
+                  CERTIFICATIONS & CREDENTIALS
+                </h3>
+              </div>
+
+              <div className="space-y-3">
+                {certifications.map((cert, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex items-start gap-3 p-2.5 rounded-lg transition-colors ${
+                      isDark ? 'hover:bg-neutral-900/60' : 'hover:bg-neutral-50'
+                    }`}
+                  >
+                    <FileCheck
+                      className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                        isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+                      }`}
+                    />
+                    <span className={`text-xs sm:text-[13px] font-medium leading-snug ${isDark ? 'text-neutral-300' : 'text-neutral-800'}`}>
+                      {cert}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
