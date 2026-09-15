@@ -30,6 +30,19 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     };
     window.addEventListener('resize', handleResize);
 
+    const mouse = { x: width / 2, y: height / 2, active: false };
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    };
+    const handleMouseLeave = () => {
+      mouse.active = false;
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
+
     const color = isDark ? '197, 168, 128' : '158, 125, 78'; // matches your #C5A880 / #9E7D4E accent
 
     type Particle = {
@@ -44,10 +57,10 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     const particles: Particle[] = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      r: Math.random() * 1.6 + 0.4,
-      vx: (Math.random() - 0.5) * 0.15,
-      vy: (Math.random() - 0.5) * 0.15,
-      alpha: Math.random() * 0.5 + 0.15,
+      r: Math.random() * 1.8 + 0.6,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      alpha: Math.random() * 0.5 + 0.2,
     }));
 
     let animationId: number;
@@ -59,6 +72,19 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
         if (!prefersReducedMotion) {
           p.x += p.vx;
           p.y += p.vy;
+
+          // Gentle repel from the mouse position
+          if (mouse.active) {
+            const dx = p.x - mouse.x;
+            const dy = p.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const repelRadius = 120;
+            if (dist < repelRadius && dist > 0.01) {
+              const force = (repelRadius - dist) / repelRadius;
+              p.x += (dx / dist) * force * 1.8;
+              p.y += (dy / dist) * force * 1.8;
+            }
+          }
 
           if (p.x < 0) p.x = width;
           if (p.x > width) p.x = 0;
@@ -79,6 +105,8 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(animationId);
     };
   }, [isDark, particleCount]);
