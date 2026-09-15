@@ -2,7 +2,16 @@ import React from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { personalInfo, portraitImg } from '../data/portfolioData';
 import { downloadCvAsPdf } from '../utils/cvPdfGenerator';
+import { motion } from 'motion/react';
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
 interface HeroProps {
   isDark: boolean;
   onOpenCv: () => void;
@@ -24,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Left Content Column (7 cols on lg) */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
             {/* Greeting Tag */}
-            <div className="mb-3">
+            <motion.div className="mb-3">
               <span
                 className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase ${
                   isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -36,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Main Headline Name */}
             <h1
-              id="hero-name"
+              motion.id="hero-name"
               className={`font-cormorant text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-[0.06em] leading-[1.04] mb-4 ${
                 isDark ? 'text-white' : 'text-neutral-900'
               }`}
@@ -47,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             {/* Sub-Roles Banner */}
-            <div className="mb-6">
+            <motion.div className="mb-6">
               <p
                 className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase ${
                   isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -58,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Verbatim Bio Copy */}
-            <p
+            <motion.p
               id="hero-bio"
               className={`font-manrope text-sm sm:text-[15px] leading-relaxed max-w-2xl font-normal mb-8 text-justify ${
                 isDark ? 'text-neutral-400' : 'text-neutral-700'
@@ -68,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-12">
+            <motion.div className="flex flex-wrap items-center gap-4 mb-12">
               <button
                 id="hero-view-projects-btn"
                 type="button"
