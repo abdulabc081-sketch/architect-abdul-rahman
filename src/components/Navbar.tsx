@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Download, Sun, Moon, Menu, X, FileText } from 'lucide-react';
 import { Logo } from './Logo';
 import { downloadCvAsPdf } from '../utils/cvPdfGenerator';
+import { motion } from 'motion/react';
 
 interface NavbarProps {
   isDark: boolean;
@@ -92,12 +93,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 {item.label}
                 {isActive && (
-                  <span
-                    className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full ${
-                      isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'
-                    }`}
+                  <motion.span
+                   layoutId="nav-active-dot"
+                   className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${
+                   isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'
+                }`}
+                 transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
-                )}
+                 )}
               </a>
             );
           })}
