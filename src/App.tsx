@@ -9,6 +9,7 @@ import { CvModal } from './components/CvModal';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Project } from './types';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [isDark, setIsDark] = useState<boolean>(() => {
@@ -123,11 +124,13 @@ export default function App() {
       />
 
       {/* Interactive Architectural CV / Resume Viewer Modal */}
-      <CvModal
+       <CvModal
         isOpen={isCvOpen}
         onClose={() => setIsCvOpen(false)}
         isDark={isDark}
       />
+
+      <Analytics />
     </div>
   );
 }
