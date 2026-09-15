@@ -124,11 +124,13 @@ export default function App() {
       />
 
       {/* Interactive Architectural CV / Resume Viewer Modal */}
-       <CvModal
+      <CvModal
         isOpen={isCvOpen}
         onClose={() => setIsCvOpen(false)}
         isDark={isDark}
       />
+
+      <Analytics />
     </div>
   );
 }
