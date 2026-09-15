@@ -33,11 +33,17 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Left Content Column (7 cols on lg) */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
             {/* Greeting Tag */}
-            <motion.div className="mb-3">
-              <span
-                className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase ${
-                  isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
-                }`}
+            <motion.div 
+               className="mb-3"
+               initial="hidden"
+               animate="visible"
+                custom={0}
+                variants={fadeUp}
+>
+  <span
+    className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase ${
+      isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+    }`}
               >
                 HELLO, I'M
               </span>
@@ -45,7 +51,8 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Main Headline Name */}
             <h1
-              motion.id="hero-name"
+             <motion.h1 
+               id="hero-name"
               className={`font-cormorant text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-[0.06em] leading-[1.04] mb-4 ${
                 isDark ? 'text-white' : 'text-neutral-900'
               }`}
