@@ -12,6 +12,7 @@ const fadeUp = {
     transition: { duration: 0.6, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] },
   }),
 };
+
 interface HeroProps {
   isDark: boolean;
   onOpenCv: () => void;
@@ -33,37 +34,46 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Left Content Column (7 cols on lg) */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
             {/* Greeting Tag */}
-            <motion.div 
-               className="mb-3"
-               initial="hidden"
-               animate="visible"
-                custom={0}
-                variants={fadeUp}
->
-  <span
-    className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase ${
-      isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
-    }`}
+            <motion.div
+              className="mb-3"
+              initial="hidden"
+              animate="visible"
+              custom={0}
+              variants={fadeUp}
+            >
+              <span
+                className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase ${
+                  isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
+                }`}
               >
                 HELLO, I'M
               </span>
-            </div>
+            </motion.div>
 
             {/* Main Headline Name */}
-            <h1
-             <motion.h1 
-               id="hero-name"
+            <motion.h1
+              id="hero-name"
               className={`font-cormorant text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-[0.06em] leading-[1.04] mb-4 ${
                 isDark ? 'text-white' : 'text-neutral-900'
               }`}
+              initial="hidden"
+              animate="visible"
+              custom={1}
+              variants={fadeUp}
             >
               ABDUL RAHMAN
               <br />
               AZHAR
-            </h1>
+            </motion.h1>
 
             {/* Sub-Roles Banner */}
-            <motion.div className="mb-6">
+            <motion.div
+              className="mb-6"
+              initial="hidden"
+              animate="visible"
+              custom={2}
+              variants={fadeUp}
+            >
               <p
                 className={`font-manrope text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase ${
                   isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -71,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({
               >
                 ARCHITECT &nbsp;•&nbsp; PROJECT ARCHITECT &nbsp;•&nbsp; PROJECT DELIVERY
               </p>
-            </div>
+            </motion.div>
 
             {/* Verbatim Bio Copy */}
             <motion.p
@@ -79,12 +89,22 @@ export const Hero: React.FC<HeroProps> = ({
               className={`font-manrope text-sm sm:text-[15px] leading-relaxed max-w-2xl font-normal mb-8 text-justify ${
                 isDark ? 'text-neutral-400' : 'text-neutral-700'
               }`}
+              initial="hidden"
+              animate="visible"
+              custom={3}
+              variants={fadeUp}
             >
               {personalInfo.bio}
-            </p>
+            </motion.p>
 
             {/* Action Buttons */}
-            <motion.div className="flex flex-wrap items-center gap-4 mb-12">
+            <motion.div
+              className="flex flex-wrap items-center gap-4 mb-12"
+              initial="hidden"
+              animate="visible"
+              custom={4}
+              variants={fadeUp}
+            >
               <button
                 id="hero-view-projects-btn"
                 type="button"
@@ -112,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <span>DOWNLOAD CV</span>
                 <Download className="w-4 h-4" />
               </button>
-            </div>
+            </motion.div>
 
             {/* 3 Metrics Row matching exact screenshot */}
             <div
@@ -164,8 +184,6 @@ export const Hero: React.FC<HeroProps> = ({
                   </div>
                 </div>
               </div>
-
-              
 
               {/* Metric 2: Projects Delivered */}
               <div
