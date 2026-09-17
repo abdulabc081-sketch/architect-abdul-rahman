@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { projectsData } from '../data/portfolioData';
 import { Project } from '../types';
+import { motion } from 'motion/react';
 
 interface ProjectsProps {
   isDark: boolean;
@@ -12,6 +13,35 @@ interface ProjectsProps {
 // projects than this, extra ones go on the next slide instead of adding
 // a 4th row — navigate between slides with the dots below the grid.
 const ITEMS_PER_PAGE = 12;
+
+// Section header fade-up
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Divider line draw-in
+const lineGrow = {
+  hidden: { scaleX: 0 },
+  visible: {
+    scaleX: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+  },
+};
+
+// Staggered card entrance
+const cardStagger = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, delay: (i % ITEMS_PER_PAGE) * 0.06, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
 
 export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) => {
   const [activeFilter, setActiveFilter] = useState<string>('ALL');
@@ -53,7 +83,14 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="flex items-center gap-3 mb-2">
+            <motion.div
+              className="flex items-center gap-3 mb-2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              custom={0}
+              variants={fadeUp}
+            >
               <span
                 className={`font-manrope text-xs font-bold tracking-[0.25em] uppercase ${
                   isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -61,42 +98,69 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
               >
                 FEATURED PORTFOLIO
               </span>
-              <div className={`w-12 h-[1px] ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`} />
-            </div>
-            <h2
+              <motion.div
+                className={`w-12 h-[1px] origin-left ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.4 }}
+                variants={lineGrow}
+              />
+            </motion.div>
+            <motion.h2
               className={`font-cormorant text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[0.06em] ${
                 isDark ? 'text-white' : 'text-neutral-900'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              custom={1}
+              variants={fadeUp}
             >
               PROJECTS
-            </h2>
+            </motion.h2>
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2">
+          <motion.div
+            className="flex flex-wrap gap-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={2}
+            variants={fadeUp}
+          >
             {filters.map((filter) => {
               const isSelected = activeFilter === filter;
               return (
-                <button
+                <motion.button
                   key={filter}
                   id={`project-filter-${filter.toLowerCase()}`}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`font-manrope px-4 py-2 text-xs font-bold tracking-[0.18em] uppercase rounded-lg border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A880] ${
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                  className={`relative font-manrope px-4 py-2 text-xs font-bold tracking-[0.18em] uppercase rounded-lg border overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A880] ${
                     isSelected
                       ? isDark
-                        ? 'bg-[#C5A880] border-[#C5A880] text-black shadow-md'
-                        : 'bg-[#9E7D4E] border-[#9E7D4E] text-white shadow-md'
+                        ? 'border-[#C5A880] text-black shadow-md'
+                        : 'border-[#9E7D4E] text-white shadow-md'
                       : isDark
                       ? 'bg-neutral-900/80 border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700'
                       : 'bg-white border-neutral-200 text-neutral-600 hover:text-neutral-900 hover:border-neutral-300'
                   }`}
                 >
-                  {filter}
-                </button>
+                  {isSelected && (
+                    <motion.span
+                      layoutId="project-filter-pill"
+                      className={`absolute inset-0 -z-10 ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
+                      transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">{filter}</span>
+                </motion.button>
               );
             })}
-          </div>
+          </motion.div>
         </div>
 
         {/* Projects Slider — each slide is capped at ITEMS_PER_PAGE tiles;
@@ -109,12 +173,17 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
             {pages.map((pageProjects, pageIndex) => (
               <div key={pageIndex} className="w-full flex-shrink-0">
                 <div id="project-grid" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                  {pageProjects.map((project) => (
-                    <div
+                  {pageProjects.map((project, idx) => (
+                    <motion.div
                       key={project.id}
                       id={`project-card-${project.id}`}
                       onClick={() => onSelectProject(project)}
-                      className="group relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
+                      className="group relative h-72 sm:h-80 w-full rounded-2xl overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-transform duration-500"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      custom={idx}
+                      variants={cardStagger}
                     >
                       <img
                         src={project.image}
@@ -127,12 +196,12 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
 
                       {/* Project Name only */}
-                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <div className="absolute bottom-0 left-0 right-0 p-5 transition-transform duration-500 group-hover:-translate-y-1">
                         <h3 className="font-cormorant text-xl sm:text-2xl font-bold uppercase tracking-wide text-white leading-snug">
                           {project.title}
                         </h3>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
