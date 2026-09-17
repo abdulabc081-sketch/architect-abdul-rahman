@@ -18,6 +18,7 @@ import {
   Quote,
 } from 'lucide-react';
 import { servicesWhatIDo, workflowSteps, personalInfo } from '../data/portfolioData';
+import { motion } from 'motion/react';
 
 interface ExpertiseProps {
   isDark: boolean;
@@ -39,6 +40,55 @@ const softwareList = [
   { name: 'Adobe InDesign', tag: 'Tender Booklets & Portfolios', badge: 'ID' },
   { name: 'Adobe Lightroom', tag: 'Site Photo Enhancement', badge: 'LR' },
 ];
+
+// Fade + slide up, used for headings and single blocks
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Larger stagger for the 8 "What I Do" cards
+const cardStagger = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Fast, tiny stagger for the 14 software badges (scale + fade)
+const badgeStagger = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.35, delay: i * 0.04, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Left-to-right stagger for the 7 workflow steps
+const workflowStagger = {
+  hidden: { opacity: 0, x: -16 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.4, delay: i * 0.09, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Divider line draw-in
+const lineGrow = {
+  hidden: { scaleX: 0 },
+  visible: {
+    scaleX: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+  },
+};
 
 export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
   const getServiceIcon = (iconName: string) => {
@@ -95,7 +145,14 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-3 mb-2">
+          <motion.div
+            className="flex items-center gap-3 mb-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={0}
+            variants={fadeUp}
+          >
             <span
               className={`font-manrope text-xs font-bold tracking-[0.25em] uppercase ${
                 isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -103,23 +160,40 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
             >
               CORE CAPABILITIES
             </span>
-            <div className={`w-12 h-[1px] ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`} />
-          </div>
-          <h2
+            <motion.div
+              className={`w-12 h-[1px] origin-left ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={lineGrow}
+            />
+          </motion.div>
+
+          <motion.h2
             className={`font-cormorant text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[0.06em] mb-4 ${
               isDark ? 'text-white' : 'text-neutral-900'
             }`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={1}
+            variants={fadeUp}
           >
             EXPERTISE
-          </h2>
+          </motion.h2>
 
           {/* Quote Bar */}
-          <div
+          <motion.div
             className={`flex items-start gap-3 p-4 sm:p-5 rounded-xl border max-w-4xl ${
               isDark
                 ? 'bg-neutral-950 border-neutral-800 text-neutral-300'
                 : 'bg-white border-neutral-200 text-neutral-700 shadow-sm'
             }`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={2}
+            variants={fadeUp}
           >
             <Quote
               className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
@@ -132,7 +206,7 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                 {personalInfo.quoteAuthor}
               </span>
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* 1. WHAT I DO (8 Grid Cards) */}
@@ -145,12 +219,18 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
             >
               WHAT I DO
             </h3>
-            <div className={`h-[1px] flex-1 max-w-xs ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`} />
+            <motion.div
+              className={`h-[1px] flex-1 max-w-xs origin-left ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={lineGrow}
+            />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {servicesWhatIDo.map((service, idx) => (
-              <div
+              <motion.div
                 key={idx}
                 id={`service-card-${idx}`}
                 className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 ${
@@ -158,6 +238,11 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                     ? 'bg-neutral-950/80 border-neutral-800/90 hover:border-[#C5A880]/60 hover:bg-neutral-900/90 shadow-md'
                     : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/60 hover:shadow-lg'
                 }`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={idx}
+                variants={cardStagger}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -169,7 +254,7 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                       {service.number}
                     </span>
                     <div
-                      className={`p-2.5 rounded-xl border ${
+                      className={`p-2.5 rounded-xl border transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${
                         isDark
                           ? 'bg-neutral-900 border-neutral-800 text-[#C5A880]'
                           : 'bg-neutral-50 border-neutral-200 text-[#9E7D4E]'
@@ -191,7 +276,7 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                 <p className={`font-manrope text-xs leading-relaxed mt-2 ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
                   {service.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -206,18 +291,29 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
             >
               TOOLS & SOFTWARE
             </h3>
-            <div className={`h-[1px] flex-1 max-w-xs ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`} />
+            <motion.div
+              className={`h-[1px] flex-1 max-w-xs origin-left ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={lineGrow}
+            />
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
             {softwareList.map((tool, idx) => (
-              <div
+              <motion.div
                 key={idx}
                 className={`p-3.5 rounded-xl border text-center flex flex-col items-center justify-center transition-all duration-200 hover:-translate-y-1 ${
                   isDark
                     ? 'bg-neutral-950 border-neutral-800 hover:border-[#C5A880]/50'
                     : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/50 shadow-sm'
                 }`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={idx}
+                variants={badgeStagger}
               >
                 <span
                   className={`font-manrope text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded mb-2 ${
@@ -234,7 +330,7 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                   {tool.name}
                 </span>
                 <span className="font-manrope text-[10px] text-neutral-500 mt-1 leading-tight">{tool.tag}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -249,18 +345,29 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
             >
               MY APPROACH & WORKFLOW
             </h3>
-            <div className={`h-[1px] flex-1 max-w-xs ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`} />
+            <motion.div
+              className={`h-[1px] flex-1 max-w-xs origin-left ${isDark ? 'bg-neutral-800' : 'bg-neutral-300'}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={lineGrow}
+            />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3">
             {workflowSteps.map((step, idx) => (
-              <div
+              <motion.div
                 key={idx}
                 className={`p-4 rounded-xl border flex flex-col justify-between relative transition-all duration-200 hover:-translate-y-1 ${
                   isDark
                     ? 'bg-neutral-950 border-neutral-800 hover:border-[#C5A880]/50'
                     : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/50 shadow-sm'
                 }`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={idx}
+                variants={workflowStagger}
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -285,7 +392,7 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
                 </div>
 
                 <p className="font-manrope text-[11px] text-neutral-400 leading-relaxed mt-2">{step.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -293,4 +400,3 @@ export const Expertise: React.FC<ExpertiseProps> = ({ isDark }) => {
     </section>
   );
 };
-
