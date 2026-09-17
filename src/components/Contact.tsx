@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, MapPin, Phone, Globe, Clock, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import { motion } from 'motion/react';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -13,6 +14,45 @@ interface ContactProps {
   isDark: boolean;
 }
 
+// Section header fade-up
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Divider line draw-in
+const lineGrow = {
+  hidden: { scaleX: 0 },
+  visible: {
+    scaleX: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+  },
+};
+
+// Left column contact cards, staggered from left
+const cardStagger = {
+  hidden: { opacity: 0, x: -24 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.45, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+// Social icons, small stagger
+const iconStagger = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.35, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
 export const Contact: React.FC<ContactProps> = ({ isDark }) => {
   return (
     <section
@@ -24,7 +64,14 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14">
-          <div className="flex items-center gap-3 mb-2">
+          <motion.div
+            className="flex items-center gap-3 mb-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={0}
+            variants={fadeUp}
+          >
             <span
               className={`font-manrope text-xs font-bold tracking-[0.25em] uppercase ${
                 isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -32,35 +79,56 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
             >
               GET IN TOUCH
             </span>
-            <div className={`w-12 h-[1px] ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`} />
-          </div>
-          <h2
+            <motion.div
+              className={`w-12 h-[1px] origin-left ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={lineGrow}
+            />
+          </motion.div>
+          <motion.h2
             className={`font-cormorant text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[0.06em] mb-3 ${
               isDark ? 'text-white' : 'text-neutral-900'
             }`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={1}
+            variants={fadeUp}
           >
             CONTACT
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
             className={`font-manrope max-w-2xl text-sm sm:text-base leading-relaxed ${
               isDark ? 'text-neutral-400' : 'text-neutral-600'
             }`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+            custom={2}
+            variants={fadeUp}
           >
             Let's collaborate on your next project. Feel free to reach out through any of the channels below.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: 5 Contact Info Blocks (5 cols) */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {/* 1. Phone / WhatsApp */}
-            <a
+            <motion.a
               href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
               className={`p-5 rounded-2xl border transition-all flex items-start gap-4 group ${
                 isDark
                   ? 'bg-neutral-950 border-neutral-800 hover:border-[#C5A880]/60'
                   : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/60 shadow-sm'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={0}
+              variants={cardStagger}
             >
               <div
                 className={`p-3 rounded-xl border transition-colors ${
@@ -86,16 +154,21 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   Call or WhatsApp for quick inquiries
                 </span>
               </div>
-            </a>
+            </motion.a>
 
             {/* 2. Email */}
-            <a
+            <motion.a
               href={`mailto:${personalInfo.email}`}
               className={`p-5 rounded-2xl border transition-all flex items-start gap-4 group ${
                 isDark
                   ? 'bg-neutral-950 border-neutral-800 hover:border-[#C5A880]/60'
                   : 'bg-white border-neutral-200 hover:border-[#9E7D4E]/60 shadow-sm'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={1}
+              variants={cardStagger}
             >
               <div
                 className={`p-3 rounded-xl border transition-colors ${
@@ -121,13 +194,18 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   Direct email for project proposals
                 </span>
               </div>
-            </a>
+            </motion.a>
 
             {/* 3. Location */}
-            <div
+            <motion.div
               className={`p-5 rounded-2xl border flex items-start gap-4 ${
                 isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={2}
+              variants={cardStagger}
             >
               <div
                 className={`p-3 rounded-xl border ${
@@ -149,13 +227,18 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   Available for meetings across UAE
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* 4. Languages */}
-            <div
+            <motion.div
               className={`p-5 rounded-2xl border flex items-start gap-4 ${
                 isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={3}
+              variants={cardStagger}
             >
               <div
                 className={`p-3 rounded-xl border ${
@@ -177,13 +260,18 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   Fluent in spoken & technical English
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* 5. Availability */}
-            <div
+            <motion.div
               className={`p-5 rounded-2xl border flex items-start gap-4 ${
                 isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
               }`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={4}
+              variants={cardStagger}
             >
               <div
                 className={`p-3 rounded-xl border ${
@@ -205,44 +293,62 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   Immediate joining / Project-based
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
-              <a
+              <motion.a
                 href={personalInfo.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                whileHover={{ y: -3, scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className={`p-3 rounded-xl border transition-colors ${
                   isDark
                     ? 'bg-neutral-950 border-neutral-800 text-[#C5A880] hover:border-[#C5A880]'
                     : 'bg-white border-neutral-200 text-[#9E7D4E] hover:border-[#9E7D4E] shadow-sm'
                 }`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={0}
+                variants={iconStagger}
               >
                 <WhatsAppIcon className="w-5 h-5" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                whileHover={{ y: -3, scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className={`p-3 rounded-xl border transition-colors ${
                   isDark
                     ? 'bg-neutral-950 border-neutral-800 text-[#C5A880] hover:border-[#C5A880]'
                     : 'bg-white border-neutral-200 text-[#9E7D4E] hover:border-[#9E7D4E] shadow-sm'
                 }`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={1}
+                variants={iconStagger}
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </motion.a>
             </div>
           </div>
 
           {/* Right Column: Let's Build Together Banner (7 cols) */}
-          <div
+          <motion.div
             className={`lg:col-span-7 p-8 sm:p-12 rounded-2xl border flex flex-col justify-center ${
               isDark ? 'bg-neutral-950 border-neutral-800' : 'bg-white border-neutral-200 shadow-md'
             }`}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <span
               className={`font-manrope text-xs font-bold tracking-[0.25em] uppercase mb-4 ${
@@ -269,11 +375,17 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
               Open to architectural and interior design opportunities across Dubai and the wider UAE — from
               concept-led residential interiors to full-lifecycle institutional projects with authority submissions.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Closing Banner matching Page 5 */}
-        <div className="mt-20 pt-10 border-t border-neutral-800/40 text-center">
+        <motion.div
+          className="mt-20 pt-10 border-t border-neutral-800/40 text-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <p
             className={`text-xs font-bold tracking-[0.25em] uppercase mb-1.5 ${
               isDark ? 'text-[#C5A880]' : 'text-[#9E7D4E]'
@@ -284,7 +396,7 @@ export const Contact: React.FC<ContactProps> = ({ isDark }) => {
           <p className={`text-sm font-semibold tracking-wider uppercase ${isDark ? 'text-neutral-300' : 'text-neutral-700'}`}>
             ABDUL RAHMAN AZHAR • ARCHITECT & PROJECT DELIVERY SPECIALIST • UAE
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
