@@ -150,13 +150,13 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark, onSelectProject }) =
                   }`}
                 >
                   {isSelected && (
-                    <motion.span
-                      layoutId="project-filter-pill"
-                      className={`absolute inset-0 -z-10 ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
-                      transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                     <motion.span
+                        layoutId="project-filter-pill"
+                        className={`absolute inset-0 ${isDark ? 'bg-[#C5A880]' : 'bg-[#9E7D4E]'}`}
+                       transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                     />
                   )}
-                  <span className="relative z-10">{filter}</span>
+                 <span className="relative z-10">{filter}</span>
                 </motion.button>
               );
             })}
